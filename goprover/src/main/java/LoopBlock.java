@@ -12,6 +12,15 @@ public class LoopBlock implements CodeBlock {
     private List<Expression> postAssertion = new ArrayList<>();
 
     public LoopBlock(int line, Expression condition, List<CodeBlock> body, Expression invariant) {
+        if (condition == null) {
+            throw new NullPointerException("At line: " + line);
+        }
+        if (body == null) {
+            throw new NullPointerException("At line: " + line);
+        }
+        if (invariant == null) {
+            throw new NullPointerException("At line: " + line);
+        }
         this.line = line;
         this.condition = condition;
         this.body = body;

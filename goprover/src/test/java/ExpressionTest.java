@@ -40,4 +40,9 @@ public class ExpressionTest {
         Assertions.assertTrue(after.contains(new OperandName("b")));
         Assertions.assertTrue(after.contains(new OperandName("c")));
     }
+
+    @Test
+    void removeTernary() {
+
+    }
 }

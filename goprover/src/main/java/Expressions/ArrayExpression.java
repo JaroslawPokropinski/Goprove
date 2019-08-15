@@ -18,6 +18,11 @@ public class ArrayExpression implements Expression {
     }
 
     @Override
+    public String toString() {
+        return String.format("%s[%s]", operandName, index);
+    }
+
+    @Override
     public Expression replace(Expression a, Expression b) {
         if (a instanceof  ArrayExpression) {
             ArrayExpression ae = (ArrayExpression) a;
@@ -46,5 +51,19 @@ public class ArrayExpression implements Expression {
 //        }
 //        throw new RuntimeException("Unimplemented contains");
         return index.contains(a);
+    }
+
+    @Override
+    public Expression removeTernary() {
+        Expression e = index.removeTernary();
+        if (e instanceof TernaryExpression) {
+            TernaryExpression t = (TernaryExpression) e;
+            return new TernaryExpression(
+                    t.getCondition(),
+                    new ArrayExpression(operandName, t.getA()).removeTernary(),
+                    new ArrayExpression(operandName, t.getB()).removeTernary()
+            );
+        }
+        return this;
     }
 }

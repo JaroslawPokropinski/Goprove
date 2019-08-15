@@ -6,13 +6,7 @@ public class Prover {
     private Context ctx = new Context();
     public boolean implies(Expression left, Expression right) {
         Solver solver = ctx.mkSolver();
-//        BoolExpr implication = null;
-//        try {
-//            implication = ctx.mkImplies((BoolExpr) convertExpression(left), (BoolExpr)convertExpression(right));
-//        } catch (Exception e) {
-//            throw new RuntimeException();
-//        }
-        BoolExpr implication = ctx.mkImplies((BoolExpr) convertExpression(left), (BoolExpr)convertExpression(right));
+        BoolExpr implication = ctx.mkImplies((BoolExpr) convertExpression(left.removeTernary()), (BoolExpr)convertExpression(right.removeTernary()));
         solver.add(ctx.mkNot(implication));
         return solver.check() == Status.UNSATISFIABLE;
     }
@@ -62,6 +56,13 @@ public class Prover {
         if (expression instanceof OperandName) {
             OperandName operandName = (OperandName) expression;
             return ctx.mkIntConst(operandName.getName());
+        }
+        if (expression instanceof ArrayExpression) {
+            ArrayExpression arrayExpression = (ArrayExpression) expression;
+            return ctx.mkSelect(
+                    ctx.mkArrayConst(arrayExpression.getOperandName().getName(), ctx.getIntSort(), ctx.getIntSort()),
+                    convertExpression(arrayExpression.getIndex())
+            );
         }
         throw new RuntimeException("Unsupported type of expression");
     }

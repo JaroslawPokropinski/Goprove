@@ -61,7 +61,7 @@ public class FunctionVisitor extends GoproveBaseVisitor<ProveFunction> {
                 condition = ctx.expression().accept(new ExpressionVisitor());
             }
             List<CodeBlock> body = ctx.block().accept(new BlockVisitor());
-            Expression invariant = null;
+            Expression invariant = new BinaryExpression(new Literal("1"), new Literal("1"), "==");
             if (ctx.loopInv() != null) {
                 invariant = ctx.loopInv().expression().accept(new ExpressionVisitor());
             }

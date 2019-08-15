@@ -17,6 +17,10 @@ public final class UnaryExpression implements Expression {
         return expression;
     }
 
+    public boolean isBoolean() {
+        return operator.equals("!");
+    }
+
     @Override
     public String toString() {
         return String.format("%s(%s)", operator, expression.toString());
@@ -47,5 +51,21 @@ public final class UnaryExpression implements Expression {
             return true;
         }
         return false;
+    }
+
+    @Override
+    public Expression removeTernary() {
+        Expression newExpression = expression.removeTernary();
+        if (newExpression instanceof TernaryExpression) {
+            if (isBoolean()) {
+                throw new RuntimeException();
+            }
+            TernaryExpression ternary = (TernaryExpression) newExpression;
+            return new TernaryExpression(ternary.getCondition(),
+                    new UnaryExpression(operator, ternary.getA()).removeTernary(),
+                    new UnaryExpression(operator, ternary.getB()).removeTernary()
+            );
+        }
+        return this;
     }
 }

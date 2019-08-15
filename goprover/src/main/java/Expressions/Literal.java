@@ -4,6 +4,9 @@ public class Literal implements SimpleExpression {
     private final String value;
 
     public Literal(String value) {
+        if (value == null) {
+            throw new NullPointerException();
+        }
         this.value = value;
     }
 
@@ -24,5 +27,10 @@ public class Literal implements SimpleExpression {
     @Override
     public boolean contains(Expression a) {
         return false;
+    }
+
+    @Override
+    public Expression removeTernary() {
+        return this;
     }
 }

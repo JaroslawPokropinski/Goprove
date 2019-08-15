@@ -175,6 +175,34 @@ class ProveContextTest {
     }
 
     @Test
+    void proverShouldProveArray() {
+        String code = "package ex1\n" +
+                "\n" +
+                "//@ prove\n" +
+                "//@ pre 1 == 1\n" +
+                "//@ post x[0] == a && x[1] == a\n" +
+                "func arrayExample(x []int, a int) {\n" +
+                "\tx[0] = a\n" +
+                "\tx[1] = x[0]\n" +
+                "\treturn\n" +
+                "}\n";
+
+        GoproveLexer grammarLexer = new GoproveLexer (CharStreams.fromString(code));
+        grammarLexer.removeErrorListeners();
+        CommonTokenStream tokens = new CommonTokenStream(grammarLexer);
+        GoproveParser parser = new GoproveParser(tokens);
+        ParseTree tree = parser.sourceFile();
+
+        GoproveBaseVisitor<ProveFunction> visitor = new SourceVisitor();
+        ProveFunction proveFunction = visitor.visit(tree);
+        ProveContext proveContext = new ProveContext(proveFunction);
+        List<Boolean> t = proveContext.prove();
+
+        List<Boolean> trues = new ArrayList<>(Collections.nCopies(t.size(), true));
+        Assertions.assertIterableEquals(trues, t);
+    }
+
+    @Test
     void proverShouldProveArrayAndOld() {
         String code = "package ex1\n" +
                 "\n" +
@@ -208,7 +236,7 @@ class ProveContextTest {
         String code = "package ex1\n" +
                 "\n" +
                 "//@ prove\n" +
-                "//@ pre true\n" +
+                "//@ pre 1 == 1\n" +
                 "//@ post (forall i integer 0 < i && i < n && x[i - 1] <= x[i])\n" +
                 "func sortExample(x []int, n int) {\n" +
                 "\ti = 1\n" +

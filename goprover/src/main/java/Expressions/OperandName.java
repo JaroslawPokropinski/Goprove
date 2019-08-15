@@ -47,9 +47,14 @@ public final class OperandName implements SimpleExpression {
                 if (getType().equals(((OperandName) a).getType())) {
                     return true;
                 }
-                throw new RuntimeException("Type doesnt match same name operands");
+                throw new RuntimeException("Type doesn't match same name operands");
             }
         }
         return false;
+    }
+
+    @Override
+    public Expression removeTernary() {
+        return this;
     }
 }
