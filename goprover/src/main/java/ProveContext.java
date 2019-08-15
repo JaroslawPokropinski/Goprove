@@ -52,7 +52,11 @@ public class ProveContext {
         List<CodeBlock> code = toProve.get(0).codeBlocks;
         List<Expression> assertion = new ArrayList<>();
         for (OperandName op : args) {
-           assertion.add(new BinaryExpression(op, new OperandName(String.format("%s'old", op.getName()), op.getType()), "=="));
+           assertion.add(new BinaryExpression(
+                   op,
+                   new OperandName(String.format("%s'old", op.getName()), op.getType()),
+                   "=="
+           ));
         }
         for (CodeBlock codeBlock : code) {
             assertion = codeBlock.getForwardAssertion(assertion);

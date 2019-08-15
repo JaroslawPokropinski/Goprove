@@ -750,6 +750,7 @@ receiverType
 
 expression
     : unaryExpr
+    | 'forall' operandName 'integer' expression
     | expression ('*' | '/' | '%') expression
     | expression ('+' | '-') expression
     | expression ('<<' | '>>') expression

@@ -57,11 +57,12 @@ public class LoopBlock implements CodeBlock {
         for (Iterator<Expression> iterator = prev.iterator(); iterator.hasNext(); ) {
             Expression next = iterator.next();
             // if next contains any of variables then remove it
-            getVariables().forEach((v) -> {
+            for (OperandName v : getVariables()) {
                 if (next.contains(v)) {
                     iterator.remove();
+                    break;
                 }
-            });
+            }
         }
         postAssertion.addAll(prev);
         // TODO : In the loop assertions

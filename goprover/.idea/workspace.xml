@@ -4,7 +4,268 @@
     <bookmark url="file://$PROJECT_DIR$/src/main/java/LoopBlock.java" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93d5a541-7120-415c-82d1-70fa0a01f2a4" name="Default Changelist" comment="" />
+    <list default="true" id="93d5a541-7120-415c-82d1-70fa0a01f2a4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Exceptions/UnimplementedException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Expressions/ArrayExpression.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Expressions/ForallExpression.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Expressions/TernaryExpression.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ExpressionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/antlr4/Goprove.g4" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/antlr4/Goprove.g4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Antlr/GoproveLexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Antlr/GoproveLexer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Antlr/GoproveParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Antlr/GoproveParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/AssignmentBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/AssignmentBlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Expressions/BinaryExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Expressions/BinaryExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Expressions/ExpressionVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Expressions/ExpressionVisitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Expressions/OperandName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Expressions/OperandName.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/FunctionVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FunctionVisitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/LoopBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/LoopBlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ProveContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ProveContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Prover.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Prover.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ProveContextTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ProveContextTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveLexer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveLexer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$AnonymousFieldContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$AnonymousFieldContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$ArgumentsContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$ArgumentsContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$ArrayLengthContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$ArrayLengthContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$ArrayTypeContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$ArrayTypeContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$AssertStatementContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$AssertStatementContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$Assign_opContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$Assign_opContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$AssignmentContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$AssignmentContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$BasicLitContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$BasicLitContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$BlockContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$BlockContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$BreakStmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$BreakStmtContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$ChannelTypeContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$ChannelTypeContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$CommCaseContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$CommCaseContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$CommClauseContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$CommClauseContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$CompositeLitContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$CompositeLitContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$ConstDeclContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$ConstDeclContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$ConstSpecContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$ConstSpecContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$ContinueStmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$ContinueStmtContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$ConversionContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$ConversionContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$DeclarationContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$DeclarationContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$DeferStmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$DeferStmtContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$ElementContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$ElementContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$ElementListContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$ElementListContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$ElementTypeContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$ElementTypeContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$EmptyStmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$EmptyStmtContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$EosContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$EosContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$EqExpressionContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$EqExpressionContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$ExprCaseClauseContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$ExprCaseClauseContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$ExprSwitchCaseContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$ExprSwitchCaseContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$ExprSwitchStmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$ExprSwitchStmtContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$ExpressionContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$ExpressionContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$ExpressionListContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$ExpressionListContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$ExpressionStmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$ExpressionStmtContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$FallthroughStmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$FallthroughStmtContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$FieldDeclContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$FieldDeclContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$ForClauseContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$ForClauseContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$ForStmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$ForStmtContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$FunctionContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$FunctionContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$FunctionDeclContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$FunctionDeclContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$FunctionLitContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$FunctionLitContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$FunctionTypeContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$FunctionTypeContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$GoStmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$GoStmtContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$GotoStmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$GotoStmtContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$IdentifierListContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$IdentifierListContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$IfStmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$IfStmtContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$ImportDeclContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$ImportDeclContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$ImportPathContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$ImportPathContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$ImportSpecContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$ImportSpecContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$IncDecStmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$IncDecStmtContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$IndexContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$IndexContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$InterfaceTypeContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$InterfaceTypeContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$KeyContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$KeyContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$KeyedElementContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$KeyedElementContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$LabeledStmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$LabeledStmtContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$LiteralContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$LiteralContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$LiteralTypeContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$LiteralTypeContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$LiteralValueContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$LiteralValueContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$LogExpressionContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$LogExpressionContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$LoopInvContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$LoopInvContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$MapTypeContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$MapTypeContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$MethodDeclContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$MethodDeclContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$MethodExprContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$MethodExprContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$MethodSpecContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$MethodSpecContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$OperandContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$OperandContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$OperandNameContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$OperandNameContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$PackageClauseContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$PackageClauseContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$ParameterDeclContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$ParameterDeclContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$ParameterListContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$ParameterListContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$ParametersContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$ParametersContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$PointerTypeContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$PointerTypeContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$PrimaryExprContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$PrimaryExprContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$ProveFunctionDeclContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$ProveFunctionDeclContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$ProveOperandContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$ProveOperandContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$QualifiedIdentContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$QualifiedIdentContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$RangeClauseContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$RangeClauseContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$ReceiverContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$ReceiverContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$ReceiverTypeContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$ReceiverTypeContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$RecvStmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$RecvStmtContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$ResultContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$ResultContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$ReturnStmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$ReturnStmtContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$SelectStmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$SelectStmtContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$SelectorContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$SelectorContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$SendStmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$SendStmtContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$ShortVarDeclContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$ShortVarDeclContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$SignatureContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$SignatureContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$SimpleStmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$SimpleStmtContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$SliceContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$SliceContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$SliceTypeContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$SliceTypeContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$SourceFileContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$SourceFileContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$StatementContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$StatementContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$StatementListContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$StatementListContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$StructTypeContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$StructTypeContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$SwitchStmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$SwitchStmtContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$TopLevelDeclContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$TopLevelDeclContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$TypeAssertionContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$TypeAssertionContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$TypeCaseClauseContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$TypeCaseClauseContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$TypeContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$TypeContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$TypeDeclContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$TypeDeclContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$TypeListContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$TypeListContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$TypeLitContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$TypeLitContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$TypeNameContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$TypeNameContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$TypeSpecContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$TypeSpecContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$TypeSwitchCaseContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$TypeSwitchCaseContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$TypeSwitchGuardContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$TypeSwitchGuardContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$TypeSwitchStmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$TypeSwitchStmtContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$UnaryExprContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$UnaryExprContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$VarDeclContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$VarDeclContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$VarSpecContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser$VarSpecContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Antlr/GoproveParser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/AssignmentBlock.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/AssignmentBlock.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Expressions/BinaryExpression.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Expressions/BinaryExpression.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Expressions/ExpressionVisitor$UnaryExpressionVisitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Expressions/ExpressionVisitor$UnaryExpressionVisitor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Expressions/ExpressionVisitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Expressions/ExpressionVisitor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Expressions/OperandName.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Expressions/OperandName.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/FunctionVisitor$BlockVisitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/FunctionVisitor$BlockVisitor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/FunctionVisitor$ParameterVisitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/FunctionVisitor$ParameterVisitor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/FunctionVisitor$StatementVisitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/FunctionVisitor$StatementVisitor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/FunctionVisitor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/FunctionVisitor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Goprove.interp" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Goprove.interp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Goprove.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Goprove.tokens" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveLexer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveLexer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveLexer.interp" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveLexer.interp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveLexer.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveLexer.tokens" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$AnonymousFieldContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$AnonymousFieldContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$ArgumentsContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$ArgumentsContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$ArrayLengthContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$ArrayLengthContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$ArrayTypeContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$ArrayTypeContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$AssertStatementContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$AssertStatementContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$Assign_opContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$Assign_opContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$AssignmentContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$AssignmentContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$BasicLitContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$BasicLitContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$BlockContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$BlockContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$BreakStmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$BreakStmtContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$ChannelTypeContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$ChannelTypeContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$CommCaseContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$CommCaseContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$CommClauseContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$CommClauseContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$CompositeLitContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$CompositeLitContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$ConstDeclContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$ConstDeclContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$ConstSpecContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$ConstSpecContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$ContinueStmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$ContinueStmtContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$ConversionContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$ConversionContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$DeclarationContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$DeclarationContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$DeferStmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$DeferStmtContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$ElementContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$ElementContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$ElementListContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$ElementListContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$ElementTypeContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$ElementTypeContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$EmptyStmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$EmptyStmtContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$EosContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$EosContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$EqExpressionContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$EqExpressionContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$ExprCaseClauseContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$ExprCaseClauseContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$ExprSwitchCaseContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$ExprSwitchCaseContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$ExprSwitchStmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$ExprSwitchStmtContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$ExpressionContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$ExpressionContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$ExpressionListContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$ExpressionListContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$ExpressionStmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$ExpressionStmtContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$FallthroughStmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$FallthroughStmtContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$FieldDeclContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$FieldDeclContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$ForClauseContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$ForClauseContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$ForStmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$ForStmtContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$FunctionContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$FunctionContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$FunctionDeclContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$FunctionDeclContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$FunctionLitContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$FunctionLitContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$FunctionTypeContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$FunctionTypeContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$GoStmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$GoStmtContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$GotoStmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$GotoStmtContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$IdentifierListContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$IdentifierListContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$IfStmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$IfStmtContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$ImportDeclContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$ImportDeclContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$ImportPathContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$ImportPathContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$ImportSpecContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$ImportSpecContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$IncDecStmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$IncDecStmtContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$IndexContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$IndexContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$InterfaceTypeContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$InterfaceTypeContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$KeyContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$KeyContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$KeyedElementContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$KeyedElementContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$LabeledStmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$LabeledStmtContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$LiteralContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$LiteralContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$LiteralTypeContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$LiteralTypeContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$LiteralValueContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$LiteralValueContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$LogExpressionContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$LogExpressionContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$LoopInvContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$LoopInvContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$MapTypeContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$MapTypeContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$MethodDeclContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$MethodDeclContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$MethodExprContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$MethodExprContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$MethodSpecContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$MethodSpecContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$OperandContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$OperandContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$OperandNameContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$OperandNameContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$PackageClauseContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$PackageClauseContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$ParameterDeclContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$ParameterDeclContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$ParameterListContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$ParameterListContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$ParametersContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$ParametersContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$PointerTypeContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$PointerTypeContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$PrimaryExprContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$PrimaryExprContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$ProveFunctionDeclContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$ProveFunctionDeclContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$ProveOperandContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$ProveOperandContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$QualifiedIdentContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$QualifiedIdentContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$RangeClauseContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$RangeClauseContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$ReceiverContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$ReceiverContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$ReceiverTypeContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$ReceiverTypeContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$RecvStmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$RecvStmtContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$ResultContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$ResultContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$ReturnStmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$ReturnStmtContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$SelectStmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$SelectStmtContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$SelectorContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$SelectorContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$SendStmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$SendStmtContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$ShortVarDeclContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$ShortVarDeclContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$SignatureContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$SignatureContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$SimpleStmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$SimpleStmtContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$SliceContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$SliceContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$SliceTypeContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$SliceTypeContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$SourceFileContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$SourceFileContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$StatementContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$StatementContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$StatementListContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$StatementListContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$StructTypeContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$StructTypeContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$SwitchStmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$SwitchStmtContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$TopLevelDeclContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$TopLevelDeclContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$TypeAssertionContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$TypeAssertionContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$TypeCaseClauseContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$TypeCaseClauseContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$TypeContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$TypeContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$TypeDeclContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$TypeDeclContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$TypeListContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$TypeListContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$TypeLitContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$TypeLitContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$TypeNameContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$TypeNameContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$TypeSpecContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$TypeSpecContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$TypeSwitchCaseContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$TypeSwitchCaseContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$TypeSwitchGuardContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$TypeSwitchGuardContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$TypeSwitchStmtContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$TypeSwitchStmtContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$UnaryExprContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$UnaryExprContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$VarDeclContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$VarDeclContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser$VarSpecContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser$VarSpecContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GoproveParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/GoproveParser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/LoopBlock.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/LoopBlock.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ProveContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ProveContext.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Prover.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Prover.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/antlr4/Goprove.interp" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/antlr4/Goprove.interp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/antlr4/Goprove.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/antlr4/Goprove.tokens" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/antlr4/GoproveLexer.interp" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/antlr4/GoproveLexer.interp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/antlr4/GoproveLexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/antlr4/GoproveLexer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/antlr4/GoproveLexer.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/antlr4/GoproveLexer.tokens" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/antlr4/GoproveParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/antlr4/GoproveParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/ProveContextTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/ProveContextTest.class" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,14 +278,59 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.5983146">
+    <splitter split-orientation="horizontal" split-proportion="0.75722545">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/LoopBlock.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="901">
+                  <caret line="64" column="13" selection-start-line="64" selection-start-column="13" selection-end-line="64" selection-end-column="13" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/java/Prover.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="202">
+                  <caret line="14" column="8" lean-forward="true" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="jar://$MAVEN_REPOSITORY$/org/junit/platform/junit-platform-commons/1.5.0-RC2/junit-platform-commons-1.5.0-RC2.jar!/org/junit/platform/commons/util/ReflectionUtils.class">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="176">
+                  <caret line="112" column="133" selection-start-line="112" selection-start-column="133" selection-end-line="112" selection-end-column="133" />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/ProveContext.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="333">
-                  <caret line="65" selection-start-line="65" selection-end-line="65" />
+                <state relative-caret-position="1003">
+                  <caret line="70" column="62" selection-start-line="70" selection-start-column="44" selection-end-line="70" selection-end-column="62" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/AssignmentBlock.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="765">
+                  <caret line="57" column="49" selection-start-line="57" selection-start-column="42" selection-end-line="57" selection-end-column="49" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -35,26 +341,17 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/Expressions/OperandName.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="391">
-                  <caret line="26" column="19" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
-                  <folding>
-                    <element signature="e#230#231#0" expanded="true" />
-                    <element signature="e#257#258#0" expanded="true" />
-                    <element signature="e#476#477#0" expanded="true" />
-                    <element signature="e#504#505#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="350">
+                  <caret line="43" column="43" lean-forward="true" selection-start-line="43" selection-start-column="43" selection-end-line="43" selection-end-column="43" />
                 </state>
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/java/FunctionVisitor.java">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/Expressions/BinaryExpression.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="370">
-                  <caret line="113" column="9" selection-start-line="113" selection-start-column="9" selection-end-line="113" selection-end-column="9" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
+                <state relative-caret-position="316">
+                  <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
                 </state>
               </provider>
             </entry>
@@ -62,35 +359,26 @@
           <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/antlr4/Goprove.g4">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-5780">
-                  <caret line="208" column="32" selection-start-line="208" selection-start-column="19" selection-end-line="208" selection-end-column="32" />
-                  <folding>
-                    <element signature="e#0#29727#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="10234">
+                  <caret line="759" column="24" selection-start-line="756" selection-start-column="18" selection-end-line="759" selection-end-column="24" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+            <entry file="file://$PROJECT_DIR$/src/main/java/Expressions/ArrayExpression.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="425">
-                  <caret line="32" column="8" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
+                <state relative-caret-position="350">
+                  <caret line="39" column="9" lean-forward="true" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
                 </state>
               </provider>
             </entry>
           </file>
           <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/LoopBlock.java">
+            <entry file="file://$PROJECT_DIR$/src/main/java/Expressions/Expression.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="370">
-                  <caret line="100" column="28" selection-start-line="100" selection-start-column="28" selection-end-line="100" selection-end-column="28" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
+                <state relative-caret-position="102">
+                  <caret line="6" selection-start-line="6" selection-end-line="6" />
                 </state>
               </provider>
             </entry>
@@ -102,11 +390,45 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/test/java/ProveContextTest.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="168">
-                  <caret line="77" selection-start-line="77" selection-end-line="77" />
+                <state relative-caret-position="85">
+                  <caret line="178" selection-start-line="178" selection-end-line="178" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/test/java/ExpressionTest.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="486">
+                  <caret line="38" column="11" selection-start-line="38" selection-start-column="11" selection-end-line="38" selection-end-column="11" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/Expressions/TernaryExpression.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state>
+                  <caret column="20" selection-start-column="20" selection-end-column="20" />
+                  <folding>
+                    <element signature="e#538#539#0" expanded="true" />
+                    <element signature="e#609#610#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/Exceptions/UnimplementedException.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="34">
+                  <caret line="2" column="35" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="35" />
                 </state>
               </provider>
             </entry>
@@ -119,8 +441,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -135,9 +457,15 @@
       <find>for</find>
       <find>expression</find>
       <find>primar</find>
-      <find>post</find>
       <find>identifierLis</find>
+      <find>post</find>
+      <find>old</find>
+      <find>OperandName</find>
+      <find>int[]</find>
     </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -156,7 +484,6 @@
         <option value="$PROJECT_DIR$/src/main/java/Expression/Operand.java" />
         <option value="$PROJECT_DIR$/src/main/java/Expression/BinaryExpresion.java" />
         <option value="$PROJECT_DIR$/src/main/java/SourceVisitor.java" />
-        <option value="$PROJECT_DIR$/src/main/antlr4/Goprove.g4" />
         <option value="$PROJECT_DIR$/src/main/java/Antlr/GoproveParser.java" />
         <option value="$PROJECT_DIR$/src/main/java/Expression/BinaryExpression.java" />
         <option value="$PROJECT_DIR$/src/main/java/Expression/Expression.java" />
@@ -166,22 +493,30 @@
         <option value="$PROJECT_DIR$/src/main/java/Expression/SimpleExpression.java" />
         <option value="$PROJECT_DIR$/src/main/java/Expression/UnaryExpression.java" />
         <option value="$PROJECT_DIR$/src/main/java/Expression/Literal.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Prover.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Expressions/Expression.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Expressions/BinaryExpression.java" />
         <option value="$PROJECT_DIR$/src/main/java/Expressions/UnaryExpression.java" />
         <option value="$PROJECT_DIR$/src/main/java/Expressions/Literal.java" />
         <option value="$PROJECT_DIR$/src/main/java/CodeBlock.java" />
         <option value="$PROJECT_DIR$/src/main/java/AssertBlock.java" />
-        <option value="$PROJECT_DIR$/src/main/java/AssignmentBlock.java" />
         <option value="$PROJECT_DIR$/src/main/java/ReturnBlock.java" />
-        <option value="$PROJECT_DIR$/src/test/java/ProveContextTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/ProveFunction.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Expressions/OperandName.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ProveContext.java" />
+        <option value="$PROJECT_DIR$/src/main/antlr4/Goprove.g4" />
+        <option value="$PROJECT_DIR$/src/main/java/Antlr/GoproveVisitor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Expressions/ForallExpression.java" />
+        <option value="$PROJECT_DIR$/src/main/java/AssignmentBlock.java" />
         <option value="$PROJECT_DIR$/src/main/java/LoopBlock.java" />
         <option value="$PROJECT_DIR$/src/main/java/FunctionVisitor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ProveContext.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Expressions/ExpressionVisitor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Expressions/Expression.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ExpressionTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Exceptions/UnimplementedException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Expressions/BinaryExpression.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Expressions/ArrayExpression.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Expressions/OperandName.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Expressions/TernaryExpression.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ProveContextTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Prover.java" />
       </list>
     </option>
   </component>
@@ -197,17 +532,19 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="2322" />
-    <option name="y" value="-8" />
-    <option name="width" value="1932" />
-    <option name="height" value="1053" />
+    <option name="x" value="-46" />
+    <option name="y" value="-26" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -257,7 +594,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -268,10 +604,11 @@
     <property name="$PROJECT_DIR$/src/main/antlr4/Goprove.g4::/gen-listener" value="true" />
     <property name="$PROJECT_DIR$/src/main/antlr4/Goprove.g4::/gen-visitor" value="true" />
     <property name="$PROJECT_DIR$/src/main/antlr4/Goprove.g4::/output-dir" value="D:\Programming ssd\Praca dyplomowa\goprover\target\generated-sources\antlr4" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../examples/ex0.go" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/Antlr" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -329,6 +666,15 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ExpressionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="goprover" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ExpressionTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ProveContextTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="goprover" />
       <option name="PACKAGE_NAME" value="" />
@@ -341,6 +687,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.ProveContextTest" />
+        <item itemvalue="JUnit.ExpressionTest" />
         <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main" />
       </list>
@@ -360,34 +707,34 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ProveContextTest - 2019.08.02 at 18h 53m 19s.xml">
+    <history-entry file="ExpressionTest - 2019.08.15 at 16h 22m 16s.xml">
+      <configuration name="ExpressionTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ExpressionTest - 2019.08.15 at 16h 27m 04s.xml">
+      <configuration name="ExpressionTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ProveContextTest - 2019.08.15 at 16h 27m 21s.xml">
       <configuration name="ProveContextTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ProveContextTest - 2019.08.02 at 18h 55m 58s.xml">
+    <history-entry file="ProveContextTest - 2019.08.15 at 16h 28m 45s.xml">
       <configuration name="ProveContextTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ProveContextTest - 2019.08.02 at 19h 25m 32s.xml">
+    <history-entry file="ProveContextTest - 2019.08.15 at 16h 30m 06s.xml">
       <configuration name="ProveContextTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ProveContextTest - 2019.08.02 at 19h 33m 01s.xml">
+    <history-entry file="ProveContextTest - 2019.08.15 at 16h 32m 51s.xml">
       <configuration name="ProveContextTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ProveContextTest - 2019.08.02 at 19h 33m 45s.xml">
+    <history-entry file="ProveContextTest - 2019.08.15 at 16h 33m 43s.xml">
       <configuration name="ProveContextTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ProveContextTest - 2019.08.02 at 19h 35m 35s.xml">
+    <history-entry file="ProveContextTest - 2019.08.15 at 16h 36m 04s.xml">
       <configuration name="ProveContextTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ProveContextTest - 2019.08.02 at 19h 36m 08s.xml">
+    <history-entry file="ProveContextTest - 2019.08.15 at 16h 39m 25s.xml">
       <configuration name="ProveContextTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ProveContextTest - 2019.08.02 at 19h 38m 28s.xml">
-      <configuration name="ProveContextTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ProveContextTest - 2019.08.02 at 19h 46m 50s.xml">
-      <configuration name="ProveContextTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="ProveContextTest - 2019.08.02 at 19h 46m 56s.xml">
+    <history-entry file="ProveContextTest - 2019.08.15 at 16h 39m 49s.xml">
       <configuration name="ProveContextTest" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -401,10 +748,9 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24626866" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26226014" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -413,14 +759,14 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32936078" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32936078" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Tool Output" order="8" weight="0.32936078" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32936078" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32936078" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="ANTLR Preview" order="11" weight="0.32936078" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32936078" />
@@ -437,19 +783,23 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/test/java/ProveContextTest.java</url>
-          <line>76</line>
-          <properties class="ProveContextTest" method="proverShouldProveLoop">
-            <option name="EMULATED" value="true" />
-          </properties>
-          <option name="timeStamp" value="27" />
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Expressions/ArrayExpression.java</url>
+          <line>46</line>
+          <properties />
+          <option name="timeStamp" value="30" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/ProveContext.java</url>
-          <line>53</line>
+          <url>file://$PROJECT_DIR$/src/test/java/ProveContextTest.java</url>
+          <line>178</line>
           <properties />
-          <option name="timeStamp" value="28" />
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Prover.java</url>
+          <line>12</line>
+          <properties />
+          <option name="timeStamp" value="34" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -516,39 +866,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/Antlr/Goprove.tokens" />
     <entry file="file://$PROJECT_DIR$/src/main/java/Antlr/Goprove.interp" />
     <entry file="file://$PROJECT_DIR$/src/main/java/Antlr/GoproveLexer.tokens" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/Antlr/GoproveParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4573">
-          <caret line="299" selection-start-line="299" selection-end-line="299" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Antlr/GoproveListener.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Antlr/GoproveBaseVisitor.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Antlr/GoproveVisitor.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Antlr/GoproveLexer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="69" column="75" selection-start-line="69" selection-start-column="71" selection-end-line="69" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Expressions/ExpressionVisitor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="17" selection-start-column="17" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/BaseListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -556,27 +873,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Prover.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-357">
-          <caret column="18" selection-start-column="18" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Expressions/PrimaryExpression.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Expressions/Expression.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="35" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
         </state>
       </provider>
     </entry>
@@ -598,20 +894,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Expressions/SimpleExpression.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Expressions/BinaryExpression.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="864">
-          <caret line="73" column="23" selection-start-line="73" selection-start-column="23" selection-end-line="73" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/CodeBlock.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -622,34 +904,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Antlr/GoproveBaseListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="43" lean-forward="true" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/junit/platform/junit-platform-commons/1.5.0-RC2/junit-platform-commons-1.5.0-RC2.jar!/org/junit/platform/commons/util/ReflectionUtils.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="112" column="133" selection-start-line="112" selection-start-column="133" selection-end-line="112" selection-end-column="133" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ReturnBlock.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="14" column="102" selection-start-line="14" selection-start-column="92" selection-end-line="14" selection-end-column="102" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/AssignmentBlock.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="53" column="102" selection-start-line="53" selection-start-column="92" selection-end-line="53" selection-end-column="102" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -666,49 +924,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="32" column="8" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/antlr4/Goprove.g4">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5780">
-          <caret line="208" column="32" selection-start-line="208" selection-start-column="19" selection-end-line="208" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#29727#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Expressions/OperandName.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="26" column="19" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
-          <folding>
-            <element signature="e#230#231#0" expanded="true" />
-            <element signature="e#257#258#0" expanded="true" />
-            <element signature="e#476#477#0" expanded="true" />
-            <element signature="e#504#505#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ProveContextTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="77" selection-start-line="77" selection-end-line="77" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ProveFunction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -719,10 +934,98 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Antlr/GoproveVisitor.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Antlr/GoproveParser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="537">
+          <caret line="299" selection-start-line="299" selection-end-line="299" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Antlr/GoproveListener.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Antlr/GoproveLexer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="69" column="75" selection-start-line="69" selection-start-column="71" selection-end-line="69" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Antlr/GoproveBaseListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="43" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Antlr/GoproveBaseVisitor.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="32" column="8" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Expressions/SimpleExpression.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-11.0.3/lib/src.zip!/java.base/java/util/ArrayList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="1008" column="22" selection-start-line="1008" selection-start-column="22" selection-end-line="1008" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Expressions/ForallExpression.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Expressions/PrimaryExpression.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/FunctionVisitor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="19" column="70" selection-start-line="19" selection-start-column="59" selection-end-line="19" selection-end-column="70" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Expressions/ExpressionVisitor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="44" column="46" selection-start-line="44" selection-start-column="46" selection-end-line="44" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/LoopBlock.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="100" column="28" selection-start-line="100" selection-start-column="28" selection-end-line="100" selection-end-column="28" />
+        <state relative-caret-position="901">
+          <caret line="64" column="13" selection-start-line="64" selection-start-column="13" selection-end-line="64" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -731,18 +1034,108 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ProveContext.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="333">
-          <caret line="65" selection-start-line="65" selection-end-line="65" />
+        <state relative-caret-position="1003">
+          <caret line="70" column="62" selection-start-line="70" selection-start-column="44" selection-end-line="70" selection-end-column="62" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/FunctionVisitor.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/AssignmentBlock.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="113" column="9" selection-start-line="113" selection-start-column="9" selection-end-line="113" selection-end-column="9" />
+        <state relative-caret-position="765">
+          <caret line="57" column="49" selection-start-line="57" selection-start-column="42" selection-end-line="57" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/antlr4/Goprove.g4">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="10234">
+          <caret line="759" column="24" selection-start-line="756" selection-start-column="18" selection-end-line="759" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Expressions/Expression.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Exceptions/UnimplementedException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="35" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Expressions/ArrayExpression.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="39" column="9" lean-forward="true" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Expressions/BinaryExpression.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="316">
+          <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Expressions/TernaryExpression.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="20" selection-start-column="20" selection-end-column="20" />
+          <folding>
+            <element signature="e#538#539#0" expanded="true" />
+            <element signature="e#609#610#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Expressions/OperandName.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="43" column="43" lean-forward="true" selection-start-line="43" selection-start-column="43" selection-end-line="43" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/junit/platform/junit-platform-commons/1.5.0-RC2/junit-platform-commons-1.5.0-RC2.jar!/org/junit/platform/commons/util/ReflectionUtils.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="112" column="133" selection-start-line="112" selection-start-column="133" selection-end-line="112" selection-end-column="133" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ExpressionTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="38" column="11" selection-start-line="38" selection-start-column="11" selection-end-line="38" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ProveContextTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="178" selection-start-line="178" selection-end-line="178" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Prover.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="14" column="8" lean-forward="true" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

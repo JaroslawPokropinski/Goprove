@@ -29,11 +29,27 @@ public final class OperandName implements SimpleExpression {
 
     @Override
     public Expression replace(Expression a, Expression b) {
-        return null;
+        if (a instanceof OperandName) {
+            OperandName operandName = (OperandName) a;
+            if (getName().equals(operandName.getName())) {
+                return b;
+            } else {
+                return this;
+            }
+        }
+        return this;
     }
 
     @Override
     public boolean contains(Expression a) {
+        if (a instanceof OperandName) {
+            if (getName().equals(((OperandName) a).getName())) {
+                if (getType().equals(((OperandName) a).getType())) {
+                    return true;
+                }
+                throw new RuntimeException("Type doesnt match same name operands");
+            }
+        }
         return false;
     }
 }

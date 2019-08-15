@@ -3,9 +3,15 @@ import com.microsoft.z3.*;
 
 
 public class Prover {
-    Context ctx = new Context();
+    private Context ctx = new Context();
     public boolean implies(Expression left, Expression right) {
         Solver solver = ctx.mkSolver();
+//        BoolExpr implication = null;
+//        try {
+//            implication = ctx.mkImplies((BoolExpr) convertExpression(left), (BoolExpr)convertExpression(right));
+//        } catch (Exception e) {
+//            throw new RuntimeException();
+//        }
         BoolExpr implication = ctx.mkImplies((BoolExpr) convertExpression(left), (BoolExpr)convertExpression(right));
         solver.add(ctx.mkNot(implication));
         return solver.check() == Status.UNSATISFIABLE;

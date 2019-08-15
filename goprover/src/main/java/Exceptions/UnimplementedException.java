@@ -1,4 +1,5 @@
 package Exceptions;
 
-public class UnimplementedException {
+public class UnimplementedException extends RuntimeException {
+
 }

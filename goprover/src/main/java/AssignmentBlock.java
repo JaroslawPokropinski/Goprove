@@ -1,3 +1,4 @@
+import Expressions.ArrayExpression;
 import Expressions.BinaryExpression;
 import Expressions.Expression;
 import Expressions.OperandName;
@@ -84,7 +85,18 @@ public class AssignmentBlock implements CodeBlock {
     @Override
     public List<OperandName> getVariables() {
         ArrayList<OperandName> list = new ArrayList<>(1);
-        getLeft().forEach((e) -> list.add((OperandName) e));
+        getLeft().forEach((e) -> {
+            if (e instanceof OperandName) {
+                list.add((OperandName) e);
+                return;
+            }
+            if (e instanceof ArrayExpression) {
+                ArrayExpression ae = (ArrayExpression)e;
+                list.add(ae.getOperandName());
+                return;
+            }
+            throw new RuntimeException("Left side of expression must be either operand or array");
+        });
         return list;
     }
 }

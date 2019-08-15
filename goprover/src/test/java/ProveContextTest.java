@@ -179,10 +179,10 @@ class ProveContextTest {
         String code = "package ex1\n" +
                 "\n" +
                 "//@ prove\n" +
-                "//@ pre true\n" +
-                "//@ post x[0] = x'old[1] && x[1] = x'old[0]\n" +
+                "//@ pre 1 == 1\n" +
+                "//@ post x[0] == x'old[1] && x[1] == x'old[0]\n" +
                 "func arrayExample(x []int) {\n" +
-                "\tt := x[0]\n" +
+                "\tt = x[0]\n" +
                 "\tx[0] = x[1]\n" +
                 "\tx[1] = t\n" +
                 "\treturn\n" +
@@ -209,14 +209,14 @@ class ProveContextTest {
                 "\n" +
                 "//@ prove\n" +
                 "//@ pre true\n" +
-                "//@ post (forall i integer 0 < i && i < len(x) && x[i - 1] <= x[i])\n" +
-                "func sortExample(x []int) {\n" +
-                "\ti := 1\n" +
-                "\tfor i < len(x) {\n" +
-                "\t\tj := i\n" +
+                "//@ post (forall i integer 0 < i && i < n && x[i - 1] <= x[i])\n" +
+                "func sortExample(x []int, n int) {\n" +
+                "\ti = 1\n" +
+                "\tfor i < n {\n" +
+                "\t\tj = i\n" +
                 "\t\t//@ inv (forall k integer 0 < k && k < i - 1 && x[k - 1] <= x[k])\n" +
                 "\t\tfor j > 0 && x[j-1] > x[j] {\n" +
-                "\t\t\tt := x[j]\n" +
+                "\t\t\tt = x[j]\n" +
                 "\t\t\tx[j] = x[j-1]\n" +
                 "\t\t\tx[j-1] = t\n" +
                 "\t\t\tj = j - 1\n" +
