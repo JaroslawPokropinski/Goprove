@@ -106,10 +106,19 @@ public class LoopBlock implements CodeBlock {
         for (Expression expression : postAssertion) {
             strongInvariant = new BinaryExpression(strongInvariant, expression, "&&");
         }
-        // if program before loop establishes invariant
-        if (proveContext.getProver().implies(new BinaryExpression(new UnaryExpression("!", condition), strongInvariant, "&&"), post)) {
-            return invariant;
+        // that is, upon exit of the loop S0, p implies the desired assertion
+        if (!proveContext.getProver().implies(new BinaryExpression(new UnaryExpression("!", condition), strongInvariant, "&&"), post)) {
+            System.out.println(String.format(
+                    "Upon exit loop does not imply desired assertion\n" +
+                    "At line: %s cannot prove: not condition && invariant => post, where condition: %s, invariant: %s post: %s",
+                    line,
+                    condition,
+                    strongInvariant,
+                    post
+            ));
+            proveContext.boolList.add(false);
         }
-        throw new RuntimeException("Cannot prove: not condition && invariant => post, where condition: " + condition + ", invariant: " + strongInvariant + "post: " + post);
+        return invariant;
+        // throw new RuntimeException("Cannot prove: not condition && invariant => post, where condition: " + condition + ", invariant: " + strongInvariant + "post: " + post);
     }
 }

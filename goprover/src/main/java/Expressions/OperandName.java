@@ -1,6 +1,9 @@
 package Expressions;
 
 
+import java.util.Collection;
+import java.util.Collections;
+
 public final class OperandName implements SimpleExpression {
     private final String name;
     private final String type;
@@ -56,5 +59,10 @@ public final class OperandName implements SimpleExpression {
     @Override
     public Expression removeTernary() {
         return this;
+    }
+
+    @Override
+    public Collection<OperandName> getOperands() {
+        return Collections.singleton(this);
     }
 }

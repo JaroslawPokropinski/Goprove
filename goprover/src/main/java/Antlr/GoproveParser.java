@@ -98,8 +98,8 @@ public class GoproveParser extends Parser {
 			"'&^'", "':='", "';'", "':'", "'return'", "'break'", "'continue'", "'goto'", 
 			"'fallthrough'", "'defer'", "'if'", "'else'", "'switch'", "'case'", "'default'", 
 			"'select'", "'for'", "'range'", "'go'", "'['", "']'", "'interface'", 
-			"'map'", "'chan'", "'...'", "'struct'", "''old'", "'forall'", "'integer'", 
-			"'<'", "'<='", "'>'", "'>='", "'=='", "'!='", "'&&'", "'||'", "'!'", 
+			"'map'", "'chan'", "'...'", "'struct'", "''old'", "'<'", "'<='", "'>'", 
+			"'>='", "'=='", "'!='", "'&&'", "'||'", "'forall'", "'integer'", "'!'", 
 			"'prove'", "'pre'", "'post'", "'inv'", "'assert'", "'\\not'", "'\\or'", 
 			"'\\and'", null, null, null, null, null, null, null, null, null, null, 
 			"'//@'"
@@ -1696,7 +1696,7 @@ public class GoproveParser extends Parser {
 			setState(375);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__2) | (1L << T__5) | (1L << T__8) | (1L << T__9) | (1L << T__10) | (1L << T__11) | (1L << T__13) | (1L << T__16) | (1L << T__17) | (1L << T__19) | (1L << T__20) | (1L << T__25) | (1L << T__28) | (1L << T__30) | (1L << T__31) | (1L << T__32) | (1L << T__33) | (1L << T__34) | (1L << T__35) | (1L << T__36) | (1L << T__38) | (1L << T__41) | (1L << T__42) | (1L << T__44) | (1L << T__45) | (1L << T__47) | (1L << T__48) | (1L << T__49) | (1L << T__51) | (1L << T__53))) != 0) || ((((_la - 64)) & ~0x3f) == 0 && ((1L << (_la - 64)) & ((1L << (T__63 - 64)) | (1L << (IDENTIFIER - 64)) | (1L << (INT_LIT - 64)) | (1L << (FLOAT_LIT - 64)) | (1L << (IMAGINARY_LIT - 64)) | (1L << (RUNE_LIT - 64)) | (1L << (STRING_LIT - 64)) | (1L << (PRAGMA - 64)))) != 0)) {
+			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__2) | (1L << T__5) | (1L << T__8) | (1L << T__9) | (1L << T__10) | (1L << T__11) | (1L << T__13) | (1L << T__16) | (1L << T__17) | (1L << T__19) | (1L << T__20) | (1L << T__25) | (1L << T__28) | (1L << T__30) | (1L << T__31) | (1L << T__32) | (1L << T__33) | (1L << T__34) | (1L << T__35) | (1L << T__36) | (1L << T__38) | (1L << T__41) | (1L << T__42) | (1L << T__44) | (1L << T__45) | (1L << T__47) | (1L << T__48) | (1L << T__49) | (1L << T__51) | (1L << T__61))) != 0) || ((((_la - 64)) & ~0x3f) == 0 && ((1L << (_la - 64)) & ((1L << (T__63 - 64)) | (1L << (IDENTIFIER - 64)) | (1L << (INT_LIT - 64)) | (1L << (FLOAT_LIT - 64)) | (1L << (IMAGINARY_LIT - 64)) | (1L << (RUNE_LIT - 64)) | (1L << (STRING_LIT - 64)) | (1L << (PRAGMA - 64)))) != 0)) {
 				{
 				{
 				setState(370);
@@ -2932,7 +2932,7 @@ public class GoproveParser extends Parser {
 			setState(478);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__2) | (1L << T__9) | (1L << T__13) | (1L << T__16) | (1L << T__17) | (1L << T__19) | (1L << T__20) | (1L << T__25) | (1L << T__45) | (1L << T__47) | (1L << T__48) | (1L << T__49) | (1L << T__51) | (1L << T__53))) != 0) || ((((_la - 64)) & ~0x3f) == 0 && ((1L << (_la - 64)) & ((1L << (T__63 - 64)) | (1L << (IDENTIFIER - 64)) | (1L << (INT_LIT - 64)) | (1L << (FLOAT_LIT - 64)) | (1L << (IMAGINARY_LIT - 64)) | (1L << (RUNE_LIT - 64)) | (1L << (STRING_LIT - 64)))) != 0)) {
+			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__2) | (1L << T__9) | (1L << T__13) | (1L << T__16) | (1L << T__17) | (1L << T__19) | (1L << T__20) | (1L << T__25) | (1L << T__45) | (1L << T__47) | (1L << T__48) | (1L << T__49) | (1L << T__51) | (1L << T__61))) != 0) || ((((_la - 64)) & ~0x3f) == 0 && ((1L << (_la - 64)) & ((1L << (T__63 - 64)) | (1L << (IDENTIFIER - 64)) | (1L << (INT_LIT - 64)) | (1L << (FLOAT_LIT - 64)) | (1L << (IMAGINARY_LIT - 64)) | (1L << (RUNE_LIT - 64)) | (1L << (STRING_LIT - 64)))) != 0)) {
 				{
 				setState(477);
 				expression(0);
@@ -3816,7 +3816,7 @@ public class GoproveParser extends Parser {
 			setState(589);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__2) | (1L << T__9) | (1L << T__13) | (1L << T__16) | (1L << T__17) | (1L << T__19) | (1L << T__20) | (1L << T__25) | (1L << T__45) | (1L << T__47) | (1L << T__48) | (1L << T__49) | (1L << T__51) | (1L << T__53))) != 0) || ((((_la - 64)) & ~0x3f) == 0 && ((1L << (_la - 64)) & ((1L << (T__63 - 64)) | (1L << (IDENTIFIER - 64)) | (1L << (INT_LIT - 64)) | (1L << (FLOAT_LIT - 64)) | (1L << (IMAGINARY_LIT - 64)) | (1L << (RUNE_LIT - 64)) | (1L << (STRING_LIT - 64)))) != 0)) {
+			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__2) | (1L << T__9) | (1L << T__13) | (1L << T__16) | (1L << T__17) | (1L << T__19) | (1L << T__20) | (1L << T__25) | (1L << T__45) | (1L << T__47) | (1L << T__48) | (1L << T__49) | (1L << T__51) | (1L << T__61))) != 0) || ((((_la - 64)) & ~0x3f) == 0 && ((1L << (_la - 64)) & ((1L << (T__63 - 64)) | (1L << (IDENTIFIER - 64)) | (1L << (INT_LIT - 64)) | (1L << (FLOAT_LIT - 64)) | (1L << (IMAGINARY_LIT - 64)) | (1L << (RUNE_LIT - 64)) | (1L << (STRING_LIT - 64)))) != 0)) {
 				{
 				setState(588);
 				expression(0);
@@ -3828,7 +3828,7 @@ public class GoproveParser extends Parser {
 			setState(593);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__2) | (1L << T__9) | (1L << T__13) | (1L << T__16) | (1L << T__17) | (1L << T__19) | (1L << T__20) | (1L << T__25) | (1L << T__28) | (1L << T__45) | (1L << T__47) | (1L << T__48) | (1L << T__49) | (1L << T__51) | (1L << T__53))) != 0) || ((((_la - 64)) & ~0x3f) == 0 && ((1L << (_la - 64)) & ((1L << (T__63 - 64)) | (1L << (IDENTIFIER - 64)) | (1L << (INT_LIT - 64)) | (1L << (FLOAT_LIT - 64)) | (1L << (IMAGINARY_LIT - 64)) | (1L << (RUNE_LIT - 64)) | (1L << (STRING_LIT - 64)))) != 0)) {
+			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__2) | (1L << T__9) | (1L << T__13) | (1L << T__16) | (1L << T__17) | (1L << T__19) | (1L << T__20) | (1L << T__25) | (1L << T__28) | (1L << T__45) | (1L << T__47) | (1L << T__48) | (1L << T__49) | (1L << T__51) | (1L << T__61))) != 0) || ((((_la - 64)) & ~0x3f) == 0 && ((1L << (_la - 64)) & ((1L << (T__63 - 64)) | (1L << (IDENTIFIER - 64)) | (1L << (INT_LIT - 64)) | (1L << (FLOAT_LIT - 64)) | (1L << (IMAGINARY_LIT - 64)) | (1L << (RUNE_LIT - 64)) | (1L << (STRING_LIT - 64)))) != 0)) {
 				{
 				setState(592);
 				simpleStmt();
@@ -5638,7 +5638,7 @@ public class GoproveParser extends Parser {
 			setState(767);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__2) | (1L << T__9) | (1L << T__11) | (1L << T__13) | (1L << T__16) | (1L << T__17) | (1L << T__19) | (1L << T__20) | (1L << T__25) | (1L << T__45) | (1L << T__47) | (1L << T__48) | (1L << T__49) | (1L << T__51) | (1L << T__53))) != 0) || ((((_la - 64)) & ~0x3f) == 0 && ((1L << (_la - 64)) & ((1L << (T__63 - 64)) | (1L << (IDENTIFIER - 64)) | (1L << (INT_LIT - 64)) | (1L << (FLOAT_LIT - 64)) | (1L << (IMAGINARY_LIT - 64)) | (1L << (RUNE_LIT - 64)) | (1L << (STRING_LIT - 64)))) != 0)) {
+			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__2) | (1L << T__9) | (1L << T__11) | (1L << T__13) | (1L << T__16) | (1L << T__17) | (1L << T__19) | (1L << T__20) | (1L << T__25) | (1L << T__45) | (1L << T__47) | (1L << T__48) | (1L << T__49) | (1L << T__51) | (1L << T__61))) != 0) || ((((_la - 64)) & ~0x3f) == 0 && ((1L << (_la - 64)) & ((1L << (T__63 - 64)) | (1L << (IDENTIFIER - 64)) | (1L << (INT_LIT - 64)) | (1L << (FLOAT_LIT - 64)) | (1L << (IMAGINARY_LIT - 64)) | (1L << (RUNE_LIT - 64)) | (1L << (STRING_LIT - 64)))) != 0)) {
 				{
 				setState(763);
 				elementList();
@@ -5909,7 +5909,7 @@ public class GoproveParser extends Parser {
 			case T__48:
 			case T__49:
 			case T__51:
-			case T__53:
+			case T__61:
 			case T__63:
 			case IDENTIFIER:
 			case INT_LIT:
@@ -6540,7 +6540,7 @@ public class GoproveParser extends Parser {
 				setState(857);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
-				if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__2) | (1L << T__9) | (1L << T__13) | (1L << T__16) | (1L << T__17) | (1L << T__19) | (1L << T__20) | (1L << T__25) | (1L << T__45) | (1L << T__47) | (1L << T__48) | (1L << T__49) | (1L << T__51) | (1L << T__53))) != 0) || ((((_la - 64)) & ~0x3f) == 0 && ((1L << (_la - 64)) & ((1L << (T__63 - 64)) | (1L << (IDENTIFIER - 64)) | (1L << (INT_LIT - 64)) | (1L << (FLOAT_LIT - 64)) | (1L << (IMAGINARY_LIT - 64)) | (1L << (RUNE_LIT - 64)) | (1L << (STRING_LIT - 64)))) != 0)) {
+				if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__2) | (1L << T__9) | (1L << T__13) | (1L << T__16) | (1L << T__17) | (1L << T__19) | (1L << T__20) | (1L << T__25) | (1L << T__45) | (1L << T__47) | (1L << T__48) | (1L << T__49) | (1L << T__51) | (1L << T__61))) != 0) || ((((_la - 64)) & ~0x3f) == 0 && ((1L << (_la - 64)) & ((1L << (T__63 - 64)) | (1L << (IDENTIFIER - 64)) | (1L << (INT_LIT - 64)) | (1L << (FLOAT_LIT - 64)) | (1L << (IMAGINARY_LIT - 64)) | (1L << (RUNE_LIT - 64)) | (1L << (STRING_LIT - 64)))) != 0)) {
 					{
 					setState(856);
 					expression(0);
@@ -6552,7 +6552,7 @@ public class GoproveParser extends Parser {
 				setState(861);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
-				if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__2) | (1L << T__9) | (1L << T__13) | (1L << T__16) | (1L << T__17) | (1L << T__19) | (1L << T__20) | (1L << T__25) | (1L << T__45) | (1L << T__47) | (1L << T__48) | (1L << T__49) | (1L << T__51) | (1L << T__53))) != 0) || ((((_la - 64)) & ~0x3f) == 0 && ((1L << (_la - 64)) & ((1L << (T__63 - 64)) | (1L << (IDENTIFIER - 64)) | (1L << (INT_LIT - 64)) | (1L << (FLOAT_LIT - 64)) | (1L << (IMAGINARY_LIT - 64)) | (1L << (RUNE_LIT - 64)) | (1L << (STRING_LIT - 64)))) != 0)) {
+				if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__2) | (1L << T__9) | (1L << T__13) | (1L << T__16) | (1L << T__17) | (1L << T__19) | (1L << T__20) | (1L << T__25) | (1L << T__45) | (1L << T__47) | (1L << T__48) | (1L << T__49) | (1L << T__51) | (1L << T__61))) != 0) || ((((_la - 64)) & ~0x3f) == 0 && ((1L << (_la - 64)) & ((1L << (T__63 - 64)) | (1L << (IDENTIFIER - 64)) | (1L << (INT_LIT - 64)) | (1L << (FLOAT_LIT - 64)) | (1L << (IMAGINARY_LIT - 64)) | (1L << (RUNE_LIT - 64)) | (1L << (STRING_LIT - 64)))) != 0)) {
 					{
 					setState(860);
 					expression(0);
@@ -6568,7 +6568,7 @@ public class GoproveParser extends Parser {
 				setState(864);
 				_errHandler.sync(this);
 				_la = _input.LA(1);
-				if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__2) | (1L << T__9) | (1L << T__13) | (1L << T__16) | (1L << T__17) | (1L << T__19) | (1L << T__20) | (1L << T__25) | (1L << T__45) | (1L << T__47) | (1L << T__48) | (1L << T__49) | (1L << T__51) | (1L << T__53))) != 0) || ((((_la - 64)) & ~0x3f) == 0 && ((1L << (_la - 64)) & ((1L << (T__63 - 64)) | (1L << (IDENTIFIER - 64)) | (1L << (INT_LIT - 64)) | (1L << (FLOAT_LIT - 64)) | (1L << (IMAGINARY_LIT - 64)) | (1L << (RUNE_LIT - 64)) | (1L << (STRING_LIT - 64)))) != 0)) {
+				if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__2) | (1L << T__9) | (1L << T__13) | (1L << T__16) | (1L << T__17) | (1L << T__19) | (1L << T__20) | (1L << T__25) | (1L << T__45) | (1L << T__47) | (1L << T__48) | (1L << T__49) | (1L << T__51) | (1L << T__61))) != 0) || ((((_la - 64)) & ~0x3f) == 0 && ((1L << (_la - 64)) & ((1L << (T__63 - 64)) | (1L << (IDENTIFIER - 64)) | (1L << (INT_LIT - 64)) | (1L << (FLOAT_LIT - 64)) | (1L << (IMAGINARY_LIT - 64)) | (1L << (RUNE_LIT - 64)) | (1L << (STRING_LIT - 64)))) != 0)) {
 					{
 					setState(863);
 					expression(0);
@@ -6690,7 +6690,7 @@ public class GoproveParser extends Parser {
 			setState(895);
 			_errHandler.sync(this);
 			_la = _input.LA(1);
-			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__2) | (1L << T__9) | (1L << T__13) | (1L << T__16) | (1L << T__17) | (1L << T__19) | (1L << T__20) | (1L << T__25) | (1L << T__45) | (1L << T__47) | (1L << T__48) | (1L << T__49) | (1L << T__51) | (1L << T__53))) != 0) || ((((_la - 64)) & ~0x3f) == 0 && ((1L << (_la - 64)) & ((1L << (T__63 - 64)) | (1L << (IDENTIFIER - 64)) | (1L << (INT_LIT - 64)) | (1L << (FLOAT_LIT - 64)) | (1L << (IMAGINARY_LIT - 64)) | (1L << (RUNE_LIT - 64)) | (1L << (STRING_LIT - 64)))) != 0)) {
+			if ((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__2) | (1L << T__9) | (1L << T__13) | (1L << T__16) | (1L << T__17) | (1L << T__19) | (1L << T__20) | (1L << T__25) | (1L << T__45) | (1L << T__47) | (1L << T__48) | (1L << T__49) | (1L << T__51) | (1L << T__61))) != 0) || ((((_la - 64)) & ~0x3f) == 0 && ((1L << (_la - 64)) & ((1L << (T__63 - 64)) | (1L << (IDENTIFIER - 64)) | (1L << (INT_LIT - 64)) | (1L << (FLOAT_LIT - 64)) | (1L << (IMAGINARY_LIT - 64)) | (1L << (RUNE_LIT - 64)) | (1L << (STRING_LIT - 64)))) != 0)) {
 				{
 				setState(887);
 				_errHandler.sync(this);
@@ -6960,16 +6960,16 @@ public class GoproveParser extends Parser {
 				unaryExpr();
 				}
 				break;
-			case T__53:
+			case T__61:
 				{
 				setState(917);
-				match(T__53);
+				match(T__61);
 				setState(918);
 				operandName();
 				setState(919);
-				match(T__54);
+				match(T__62);
 				setState(920);
-				expression(8);
+				expression(1);
 				}
 				break;
 			default:
@@ -6992,7 +6992,7 @@ public class GoproveParser extends Parser {
 						_localctx = new ExpressionContext(_parentctx, _parentState);
 						pushNewRecursionContext(_localctx, _startState, RULE_expression);
 						setState(924);
-						if (!(precpred(_ctx, 7))) throw new FailedPredicateException(this, "precpred(_ctx, 7)");
+						if (!(precpred(_ctx, 8))) throw new FailedPredicateException(this, "precpred(_ctx, 8)");
 						setState(925);
 						_la = _input.LA(1);
 						if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__20) | (1L << T__21) | (1L << T__22))) != 0)) ) {
@@ -7004,7 +7004,7 @@ public class GoproveParser extends Parser {
 							consume();
 						}
 						setState(926);
-						expression(8);
+						expression(9);
 						}
 						break;
 					case 2:
@@ -7012,7 +7012,7 @@ public class GoproveParser extends Parser {
 						_localctx = new ExpressionContext(_parentctx, _parentState);
 						pushNewRecursionContext(_localctx, _startState, RULE_expression);
 						setState(927);
-						if (!(precpred(_ctx, 6))) throw new FailedPredicateException(this, "precpred(_ctx, 6)");
+						if (!(precpred(_ctx, 7))) throw new FailedPredicateException(this, "precpred(_ctx, 7)");
 						setState(928);
 						_la = _input.LA(1);
 						if ( !(_la==T__16 || _la==T__17) ) {
@@ -7024,7 +7024,7 @@ public class GoproveParser extends Parser {
 							consume();
 						}
 						setState(929);
-						expression(7);
+						expression(8);
 						}
 						break;
 					case 3:
@@ -7032,7 +7032,7 @@ public class GoproveParser extends Parser {
 						_localctx = new ExpressionContext(_parentctx, _parentState);
 						pushNewRecursionContext(_localctx, _startState, RULE_expression);
 						setState(930);
-						if (!(precpred(_ctx, 5))) throw new FailedPredicateException(this, "precpred(_ctx, 5)");
+						if (!(precpred(_ctx, 6))) throw new FailedPredicateException(this, "precpred(_ctx, 6)");
 						setState(931);
 						_la = _input.LA(1);
 						if ( !(_la==T__23 || _la==T__24) ) {
@@ -7044,7 +7044,7 @@ public class GoproveParser extends Parser {
 							consume();
 						}
 						setState(932);
-						expression(6);
+						expression(7);
 						}
 						break;
 					case 4:
@@ -7052,10 +7052,10 @@ public class GoproveParser extends Parser {
 						_localctx = new ExpressionContext(_parentctx, _parentState);
 						pushNewRecursionContext(_localctx, _startState, RULE_expression);
 						setState(933);
-						if (!(precpred(_ctx, 4))) throw new FailedPredicateException(this, "precpred(_ctx, 4)");
+						if (!(precpred(_ctx, 5))) throw new FailedPredicateException(this, "precpred(_ctx, 5)");
 						setState(934);
 						_la = _input.LA(1);
-						if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__55) | (1L << T__56) | (1L << T__57) | (1L << T__58))) != 0)) ) {
+						if ( !((((_la) & ~0x3f) == 0 && ((1L << _la) & ((1L << T__53) | (1L << T__54) | (1L << T__55) | (1L << T__56))) != 0)) ) {
 						_errHandler.recoverInline(this);
 						}
 						else {
@@ -7064,7 +7064,7 @@ public class GoproveParser extends Parser {
 							consume();
 						}
 						setState(935);
-						expression(5);
+						expression(6);
 						}
 						break;
 					case 5:
@@ -7072,10 +7072,10 @@ public class GoproveParser extends Parser {
 						_localctx = new ExpressionContext(_parentctx, _parentState);
 						pushNewRecursionContext(_localctx, _startState, RULE_expression);
 						setState(936);
-						if (!(precpred(_ctx, 3))) throw new FailedPredicateException(this, "precpred(_ctx, 3)");
+						if (!(precpred(_ctx, 4))) throw new FailedPredicateException(this, "precpred(_ctx, 4)");
 						setState(937);
 						_la = _input.LA(1);
-						if ( !(_la==T__59 || _la==T__60) ) {
+						if ( !(_la==T__57 || _la==T__58) ) {
 						_errHandler.recoverInline(this);
 						}
 						else {
@@ -7084,7 +7084,7 @@ public class GoproveParser extends Parser {
 							consume();
 						}
 						setState(938);
-						expression(4);
+						expression(5);
 						}
 						break;
 					case 6:
@@ -7092,13 +7092,13 @@ public class GoproveParser extends Parser {
 						_localctx = new ExpressionContext(_parentctx, _parentState);
 						pushNewRecursionContext(_localctx, _startState, RULE_expression);
 						setState(939);
-						if (!(precpred(_ctx, 2))) throw new FailedPredicateException(this, "precpred(_ctx, 2)");
+						if (!(precpred(_ctx, 3))) throw new FailedPredicateException(this, "precpred(_ctx, 3)");
 						{
 						setState(940);
-						match(T__61);
+						match(T__59);
 						}
 						setState(941);
-						expression(3);
+						expression(4);
 						}
 						break;
 					case 7:
@@ -7106,13 +7106,13 @@ public class GoproveParser extends Parser {
 						_localctx = new ExpressionContext(_parentctx, _parentState);
 						pushNewRecursionContext(_localctx, _startState, RULE_expression);
 						setState(942);
-						if (!(precpred(_ctx, 1))) throw new FailedPredicateException(this, "precpred(_ctx, 1)");
+						if (!(precpred(_ctx, 2))) throw new FailedPredicateException(this, "precpred(_ctx, 2)");
 						{
 						setState(943);
-						match(T__62);
+						match(T__60);
 						}
 						setState(944);
-						expression(2);
+						expression(3);
 						}
 						break;
 					}
@@ -7769,19 +7769,19 @@ public class GoproveParser extends Parser {
 	private boolean expression_sempred(ExpressionContext _localctx, int predIndex) {
 		switch (predIndex) {
 		case 8:
-			return precpred(_ctx, 7);
+			return precpred(_ctx, 8);
 		case 9:
-			return precpred(_ctx, 6);
+			return precpred(_ctx, 7);
 		case 10:
-			return precpred(_ctx, 5);
+			return precpred(_ctx, 6);
 		case 11:
-			return precpred(_ctx, 4);
+			return precpred(_ctx, 5);
 		case 12:
-			return precpred(_ctx, 3);
+			return precpred(_ctx, 4);
 		case 13:
-			return precpred(_ctx, 2);
+			return precpred(_ctx, 3);
 		case 14:
-			return precpred(_ctx, 1);
+			return precpred(_ctx, 2);
 		}
 		return true;
 	}
@@ -7874,7 +7874,7 @@ public class GoproveParser extends Parser {
 		"\u00a4\u00a6\u00a8\u00aa\u00ac\u00ae\u00b0\u00b2\u00b4\u00b6\u00b8\u00ba"+
 		"\u00bc\u00be\u00c0\u00c2\u00c4\u00c6\u00c8\u00ca\u00cc\u00ce\u00d0\u00d2"+
 		"\u00d4\u00d6\2\r\4\2\7\7KK\3\2\21\22\3\2\23\35\4\2NQTT\3\2\27\31\3\2\23"+
-		"\24\3\2\32\33\3\2:=\3\2>?\7\2\20\20\23\24\26\27\34\34BB\3\2IJ\2\u042f"+
+		"\24\3\2\32\33\3\28;\3\2<=\7\2\20\20\23\24\26\27\34\34BB\3\2IJ\2\u042f"+
 		"\2\u00d8\3\2\2\2\4\u00ec\3\2\2\2\6\u00ef\3\2\2\2\b\u00fe\3\2\2\2\n\u0102"+
 		"\3\2\2\2\f\u0108\3\2\2\2\16\u010d\3\2\2\2\20\u010f\3\2\2\2\22\u011d\3"+
 		"\2\2\2\24\u0125\3\2\2\2\26\u012d\3\2\2\2\30\u0135\3\2\2\2\32\u0143\3\2"+
@@ -8138,15 +8138,15 @@ public class GoproveParser extends Parser {
 		"\3\2\2\2\u038f\u0390\7\5\2\2\u0390\u0391\5\u00c4c\2\u0391\u0392\7\6\2"+
 		"\2\u0392\u0394\3\2\2\2\u0393\u0389\3\2\2\2\u0393\u038a\3\2\2\2\u0393\u038f"+
 		"\3\2\2\2\u0394\u00c5\3\2\2\2\u0395\u0396\bd\1\2\u0396\u039d\5\u00c8e\2"+
-		"\u0397\u0398\78\2\2\u0398\u0399\5\u009aN\2\u0399\u039a\79\2\2\u039a\u039b"+
-		"\5\u00c6d\n\u039b\u039d\3\2\2\2\u039c\u0395\3\2\2\2\u039c\u0397\3\2\2"+
-		"\2\u039d\u03b5\3\2\2\2\u039e\u039f\f\t\2\2\u039f\u03a0\t\6\2\2\u03a0\u03b4"+
-		"\5\u00c6d\n\u03a1\u03a2\f\b\2\2\u03a2\u03a3\t\7\2\2\u03a3\u03b4\5\u00c6"+
-		"d\t\u03a4\u03a5\f\7\2\2\u03a5\u03a6\t\b\2\2\u03a6\u03b4\5\u00c6d\b\u03a7"+
-		"\u03a8\f\6\2\2\u03a8\u03a9\t\t\2\2\u03a9\u03b4\5\u00c6d\7\u03aa\u03ab"+
-		"\f\5\2\2\u03ab\u03ac\t\n\2\2\u03ac\u03b4\5\u00c6d\6\u03ad\u03ae\f\4\2"+
-		"\2\u03ae\u03af\7@\2\2\u03af\u03b4\5\u00c6d\5\u03b0\u03b1\f\3\2\2\u03b1"+
-		"\u03b2\7A\2\2\u03b2\u03b4\5\u00c6d\4\u03b3\u039e\3\2\2\2\u03b3\u03a1\3"+
+		"\u0397\u0398\7@\2\2\u0398\u0399\5\u009aN\2\u0399\u039a\7A\2\2\u039a\u039b"+
+		"\5\u00c6d\3\u039b\u039d\3\2\2\2\u039c\u0395\3\2\2\2\u039c\u0397\3\2\2"+
+		"\2\u039d\u03b5\3\2\2\2\u039e\u039f\f\n\2\2\u039f\u03a0\t\6\2\2\u03a0\u03b4"+
+		"\5\u00c6d\13\u03a1\u03a2\f\t\2\2\u03a2\u03a3\t\7\2\2\u03a3\u03b4\5\u00c6"+
+		"d\n\u03a4\u03a5\f\b\2\2\u03a5\u03a6\t\b\2\2\u03a6\u03b4\5\u00c6d\t\u03a7"+
+		"\u03a8\f\7\2\2\u03a8\u03a9\t\t\2\2\u03a9\u03b4\5\u00c6d\b\u03aa\u03ab"+
+		"\f\6\2\2\u03ab\u03ac\t\n\2\2\u03ac\u03b4\5\u00c6d\7\u03ad\u03ae\f\5\2"+
+		"\2\u03ae\u03af\7>\2\2\u03af\u03b4\5\u00c6d\6\u03b0\u03b1\f\4\2\2\u03b1"+
+		"\u03b2\7?\2\2\u03b2\u03b4\5\u00c6d\5\u03b3\u039e\3\2\2\2\u03b3\u03a1\3"+
 		"\2\2\2\u03b3\u03a4\3\2\2\2\u03b3\u03a7\3\2\2\2\u03b3\u03aa\3\2\2\2\u03b3"+
 		"\u03ad\3\2\2\2\u03b3\u03b0\3\2\2\2\u03b4\u03b7\3\2\2\2\u03b5\u03b3\3\2"+
 		"\2\2\u03b5\u03b6\3\2\2\2\u03b6\u00c7\3\2\2\2\u03b7\u03b5\3\2\2\2\u03b8"+

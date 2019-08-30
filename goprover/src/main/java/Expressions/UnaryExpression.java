@@ -1,5 +1,7 @@
 package Expressions;
 
+import java.util.Collection;
+
 public final class UnaryExpression implements Expression {
     private final String operator;
     private final Expression expression;
@@ -23,7 +25,7 @@ public final class UnaryExpression implements Expression {
 
     @Override
     public String toString() {
-        return String.format("%s(%s)", operator, expression.toString());
+        return String.format("%s(%s)", operator, expression);
     }
 
     @Override
@@ -44,13 +46,8 @@ public final class UnaryExpression implements Expression {
     @Override
     public boolean contains(Expression a) {
         if (expression instanceof OperandName) {
-            if (((OperandName) expression).getName().equals(((OperandName) a).getName())) {
-                return true;
-            }
-        } else if(expression.contains(a)){
-            return true;
-        }
-        return false;
+            return ((OperandName) expression).getName().equals(((OperandName) a).getName());
+        } else return expression.contains(a);
     }
 
     @Override
@@ -67,5 +64,10 @@ public final class UnaryExpression implements Expression {
             );
         }
         return this;
+    }
+
+    @Override
+    public Collection<OperandName> getOperands() {
+        return expression.getOperands();
     }
 }

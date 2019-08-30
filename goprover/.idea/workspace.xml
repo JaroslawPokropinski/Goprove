@@ -5,10 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="93d5a541-7120-415c-82d1-70fa0a01f2a4" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/EmptyBlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../examples/ex3.go" beforeDir="false" afterPath="$PROJECT_DIR$/../examples/ex3.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../examples/ex4.go" beforeDir="false" afterPath="$PROJECT_DIR$/../examples/ex4.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Jarek.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Jarek.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/antlr4/Goprove.g4" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/antlr4/Goprove.g4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Antlr/GoproveLexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Antlr/GoproveLexer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Antlr/GoproveParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Antlr/GoproveParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Expressions/ArrayExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Expressions/ArrayExpression.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Expressions/BinaryExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Expressions/BinaryExpression.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Expressions/Expression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Expressions/Expression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Expressions/ExpressionVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Expressions/ExpressionVisitor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Expressions/ForallExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Expressions/ForallExpression.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Expressions/Literal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Expressions/Literal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Expressions/OperandName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Expressions/OperandName.java" afterDir="false" />
@@ -16,8 +24,10 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/Expressions/UnaryExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Expressions/UnaryExpression.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/FunctionVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/FunctionVisitor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/LoopBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/LoopBlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ProveContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ProveContext.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Prover.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Prover.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ExpressionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ExpressionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/SourceVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/SourceVisitor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ProveContextTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ProveContextTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -32,105 +42,57 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.38796228">
-      <split-first>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/main/java/ProveContext.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="708">
-                  <caret line="74" selection-start-line="74" selection-end-line="74" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/Expressions/BinaryExpression.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="168">
-                  <caret line="59" selection-start-line="59" selection-end-line="59" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/Expressions/UnaryExpression.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="153">
-                  <caret line="9" selection-start-line="9" selection-end-line="9" />
-                  <folding>
-                    <element signature="e#477#478#0" expanded="true" />
-                    <element signature="e#520#521#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/Expressions/TernaryExpression.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="47">
-                  <caret line="16" selection-start-line="16" selection-end-line="16" />
-                  <folding>
-                    <element signature="e#536#537#0" expanded="true" />
-                    <element signature="e#568#569#0" expanded="true" />
-                    <element signature="e#592#593#0" expanded="true" />
-                    <element signature="e#1138#1139#0" expanded="true" />
-                    <element signature="e#1231#1232#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/Prover.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="170">
-                  <caret line="10" selection-start-line="10" selection-end-line="10" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/test/java/ProveContextTest.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="166">
-                  <caret line="185" column="30" selection-start-line="185" selection-start-column="30" selection-end-line="185" selection-end-column="30" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/test/java/ExpressionTest.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="697">
-                  <caret line="44" column="26" lean-forward="true" selection-start-line="44" selection-start-column="26" selection-end-line="44" selection-end-column="26" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ProveContext.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1590">
+              <caret line="11" column="34" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="34" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/FunctionVisitor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="161" column="40" selection-start-line="161" selection-start-column="40" selection-end-line="161" selection-end-column="40" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#390#391#0" expanded="true" />
+                <element signature="e#437#438#0" expanded="true" />
+                <element signature="e#1668#1669#0" expanded="true" />
+                <element signature="e#1723#1724#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ProveContextTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="280">
+              <caret line="280" column="89" selection-start-line="280" selection-start-column="89" selection-end-line="280" selection-end-column="89" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/antlr4/Goprove.g4">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="379">
+              <caret line="246" column="15" selection-start-line="246" selection-start-column="6" selection-end-line="246" selection-end-column="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -146,8 +108,6 @@
       <find>'func'</find>
       <find>asser</find>
       <find>state</find>
-      <find>assig</find>
-      <find>func</find>
       <find>pre</find>
       <find>for</find>
       <find>expression</find>
@@ -158,6 +118,11 @@
       <find>OperandName</find>
       <find>int[]</find>
       <find>null</find>
+      <find>forall</find>
+      <find>UnaryExpression</find>
+      <find>assig</find>
+      <find>ass</find>
+      <find>func</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -179,7 +144,6 @@
         <option value="$PROJECT_DIR$/src/main/java/Expression/ComplexExpression.java" />
         <option value="$PROJECT_DIR$/src/main/java/Expression/Operand.java" />
         <option value="$PROJECT_DIR$/src/main/java/Expression/BinaryExpresion.java" />
-        <option value="$PROJECT_DIR$/src/main/java/SourceVisitor.java" />
         <option value="$PROJECT_DIR$/src/main/java/Antlr/GoproveParser.java" />
         <option value="$PROJECT_DIR$/src/main/java/Expression/BinaryExpression.java" />
         <option value="$PROJECT_DIR$/src/main/java/Expression/Expression.java" />
@@ -192,26 +156,29 @@
         <option value="$PROJECT_DIR$/src/main/java/CodeBlock.java" />
         <option value="$PROJECT_DIR$/src/main/java/AssertBlock.java" />
         <option value="$PROJECT_DIR$/src/main/java/ReturnBlock.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/ProveFunction.java" />
-        <option value="$PROJECT_DIR$/src/main/antlr4/Goprove.g4" />
         <option value="$PROJECT_DIR$/src/main/java/Antlr/GoproveVisitor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/AssignmentBlock.java" />
-        <option value="$PROJECT_DIR$/src/main/java/ProveContext.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Expressions/ExpressionVisitor.java" />
         <option value="$PROJECT_DIR$/src/main/java/Exceptions/UnimplementedException.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ExpressionTest.java" />
+        <option value="$PROJECT_DIR$/src/main/antlr4/Goprove.g4" />
+        <option value="$PROJECT_DIR$/src/main/java/Antlr/GoproveBaseListener.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Prover.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Expressions/ExpressionVisitor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/AssignmentBlock.java" />
+        <option value="$PROJECT_DIR$/src/main/java/LoopBlock.java" />
+        <option value="$PROJECT_DIR$/src/main/java/SourceVisitor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ProveContext.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/EmptyBlock.java" />
         <option value="$PROJECT_DIR$/src/main/java/Expressions/Expression.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Expressions/ArrayExpression.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Expressions/BinaryExpression.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Expressions/ForallExpression.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Expressions/TernaryExpression.java" />
         <option value="$PROJECT_DIR$/src/main/java/Expressions/UnaryExpression.java" />
         <option value="$PROJECT_DIR$/src/main/java/Expressions/OperandName.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Expressions/ForallExpression.java" />
         <option value="$PROJECT_DIR$/src/main/java/Expressions/Literal.java" />
         <option value="$PROJECT_DIR$/src/main/java/FunctionVisitor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/LoopBlock.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Expressions/ArrayExpression.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Expressions/TernaryExpression.java" />
-        <option value="$PROJECT_DIR$/src/test/java/ExpressionTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Expressions/BinaryExpression.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Prover.java" />
         <option value="$PROJECT_DIR$/src/test/java/ProveContextTest.java" />
       </list>
     </option>
@@ -228,10 +195,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-76" />
-    <option name="y" value="-20" />
+    <option name="x" value="-464" />
+    <option name="y" value="-9" />
     <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="height" value="708" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -240,7 +207,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -294,10 +260,29 @@
               <item name="test" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="goprover" type="b2602c69:ProjectViewProjectNode" />
+              <item name="goprover" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="goprover" type="b2602c69:ProjectViewProjectNode" />
+              <item name="goprover" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="generated-sources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="goprover" type="b2602c69:ProjectViewProjectNode" />
+              <item name="goprover" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="generated-sources" type="462c0819:PsiDirectoryNode" />
+              <item name="antlr4" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -388,9 +373,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ProveContextTest.proverShouldProveArrayAndOld" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="goprover" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="ProveContextTest" />
+      <option name="METHOD_NAME" value="proverShouldProveArrayAndOld" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.ProveContextTest" />
+        <item itemvalue="JUnit.ProveContextTest.proverShouldProveArrayAndOld" />
         <item itemvalue="JUnit.ExpressionTest" />
         <item itemvalue="Application.Main (1)" />
         <item itemvalue="Application.Main" />
@@ -411,34 +407,34 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ProveContextTest - 2019.08.15 at 23h 22m 15s.xml">
+    <history-entry file="ProveContextTest - 2019.08.30 at 23h 09m 01s.xml">
       <configuration name="ProveContextTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ProveContextTest - 2019.08.15 at 23h 25m 16s.xml">
+    <history-entry file="ProveContextTest - 2019.08.30 at 23h 09m 09s.xml">
       <configuration name="ProveContextTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ProveContextTest - 2019.08.15 at 23h 25m 49s.xml">
+    <history-entry file="ProveContextTest - 2019.08.30 at 23h 09m 40s.xml">
       <configuration name="ProveContextTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ProveContextTest - 2019.08.15 at 23h 25m 53s.xml">
+    <history-entry file="ProveContextTest - 2019.08.30 at 23h 12m 12s.xml">
       <configuration name="ProveContextTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ProveContextTest - 2019.08.15 at 23h 28m 23s.xml">
+    <history-entry file="ProveContextTest - 2019.08.30 at 23h 12m 28s.xml">
       <configuration name="ProveContextTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ProveContextTest - 2019.08.15 at 23h 36m 58s.xml">
+    <history-entry file="ProveContextTest - 2019.08.30 at 23h 12m 49s.xml">
       <configuration name="ProveContextTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ProveContextTest - 2019.08.15 at 23h 44m 27s.xml">
+    <history-entry file="ProveContextTest - 2019.08.30 at 23h 13m 13s.xml">
       <configuration name="ProveContextTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ProveContextTest - 2019.08.15 at 23h 44m 33s.xml">
+    <history-entry file="ProveContextTest - 2019.08.30 at 23h 16m 32s.xml">
       <configuration name="ProveContextTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ProveContextTest - 2019.08.15 at 23h 45m 16s.xml">
+    <history-entry file="ProveContextTest - 2019.08.30 at 23h 21m 53s.xml">
       <configuration name="ProveContextTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ProveContextTest - 2019.08.15 at 23h 45m 36s.xml">
+    <history-entry file="ProveContextTest - 2019.08.30 at 23h 22m 26s.xml">
       <configuration name="ProveContextTest" configurationId="JUnit" />
     </history-entry>
   </component>
@@ -454,7 +450,7 @@
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26492536" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2889126" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -463,8 +459,8 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32936078" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32936078" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.3997833" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.31310943" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39935064" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
@@ -472,7 +468,7 @@
       <window_info anchor="bottom" id="Tool Output" order="8" weight="0.32936078" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.32936078" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="ANTLR Preview" order="11" weight="0.32936078" />
+      <window_info anchor="bottom" id="ANTLR Preview" order="11" weight="0.46587217" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32936078" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -489,45 +485,57 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/Expressions/ArrayExpression.java</url>
-          <line>51</line>
+          <line>56</line>
           <properties />
           <option name="timeStamp" value="30" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/ProveContextTest.java</url>
-          <line>206</line>
-          <properties />
-          <option name="timeStamp" value="32" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/Expressions/BinaryExpression.java</url>
-          <line>12</line>
+          <line>14</line>
           <properties />
           <option name="timeStamp" value="37" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/Expressions/BinaryExpression.java</url>
-          <line>15</line>
+          <line>17</line>
           <properties />
           <option name="timeStamp" value="38" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/Prover.java</url>
-          <line>66</line>
+          <line>82</line>
           <properties />
           <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/ProveContextTest.java</url>
+          <line>265</line>
+          <properties />
+          <option name="timeStamp" value="55" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/ProveContextTest.java</url>
+          <line>239</line>
+          <properties />
+          <option name="timeStamp" value="56" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Prover.java</url>
+          <line>72</line>
+          <properties />
+          <option name="timeStamp" value="63" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Prover.java</url>
+          <line>15</line>
+          <properties />
+          <option name="timeStamp" value="69" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/Prover.java</url>
           <line>8</line>
           <properties />
-          <option name="timeStamp" value="44" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/ProveContextTest.java</url>
-          <line>230</line>
-          <properties />
-          <option name="timeStamp" value="49" />
+          <option name="timeStamp" value="70" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -535,6 +543,7 @@
       <configuration name="JUnit">
         <watch expression="prev" />
         <watch expression="((TernaryExpression)expression).a" custom="Expressions.TernaryExpression" />
+        <watch expression="((BinaryExpression)((BinaryExpression)postAssertion).left).left" custom="Expressions.BinaryExpression" />
       </configuration>
       <configuration name="Application">
         <watch expression="list.get(3)" />
@@ -581,16 +590,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Expression/ComplexExpression.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/Expression/Operand.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/SourceVisitor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="9" selection-start-line="14" selection-start-column="9" selection-end-line="14" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Antlr/GoproveLexer.interp" />
     <entry file="file://$PROJECT_DIR$/src/main/java/Antlr/Goprove.tokens" />
     <entry file="file://$PROJECT_DIR$/src/main/java/Antlr/Goprove.interp" />
@@ -605,70 +604,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CodeBlock.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="30" lean-forward="true" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ReturnBlock.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="14" column="102" selection-start-line="14" selection-start-column="92" selection-end-line="14" selection-end-column="102" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/AssertBlock.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="237">
           <caret line="25" column="102" selection-start-line="25" selection-start-column="92" selection-end-line="25" selection-end-column="102" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Antlr/GoproveVisitor.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Antlr/GoproveParser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="537">
-          <caret line="299" selection-start-line="299" selection-end-line="299" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Antlr/GoproveListener.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Antlr/GoproveLexer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="69" column="75" selection-start-line="69" selection-start-column="71" selection-end-line="69" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Antlr/GoproveBaseListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="43" selection-start-line="4" selection-start-column="43" selection-end-line="4" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Antlr/GoproveBaseVisitor.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="32" column="8" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -696,16 +635,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Expressions/ExpressionVisitor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="731">
-          <caret line="44" column="46" selection-start-line="44" selection-start-column="46" selection-end-line="44" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Exceptions/UnimplementedException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -713,135 +642,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Expressions/Expression.java">
+    <entry file="file://$PROJECT_DIR$/target/generated-sources/antlr4/GoproveParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+        <state relative-caret-position="17">
+          <caret line="11" column="7" selection-start-line="11" selection-start-column="7" selection-end-line="11" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/antlr4/Goprove.g4">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Antlr/GoproveBaseListener.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="764" column="32" lean-forward="true" selection-start-line="764" selection-start-column="32" selection-end-line="764" selection-end-column="34" />
+        <state relative-caret-position="68">
+          <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ProveFunction.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Antlr/GoproveVisitor.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Antlr/GoproveParser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="23" column="27" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="487">
+          <caret line="299" selection-start-line="299" selection-end-line="299" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/AssignmentBlock.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Antlr/GoproveLexer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-332">
-          <caret line="56" column="52" lean-forward="true" selection-start-line="56" selection-start-column="52" selection-end-line="56" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="180">
+          <caret line="69" column="75" selection-start-line="69" selection-start-column="71" selection-end-line="69" selection-end-column="75" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/LoopBlock.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Antlr/GoproveListener.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Antlr/GoproveBaseVisitor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="21" column="54" selection-start-line="21" selection-start-column="54" selection-end-line="21" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="187">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Expressions/OperandName.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/ExpressionTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="282">
-          <caret line="49" column="55" selection-start-line="49" selection-start-column="55" selection-end-line="49" selection-end-column="55" />
-          <folding>
-            <element signature="e#1401#1402#0" expanded="true" />
-            <element signature="e#1428#1429#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Expressions/Literal.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Expressions/ForallExpression.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="36" lean-forward="true" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Expressions/ArrayExpression.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="21" column="57" selection-start-line="21" selection-start-column="57" selection-end-line="21" selection-end-column="57" />
-          <folding>
-            <element signature="e#474#475#0" expanded="true" />
-            <element signature="e#540#541#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Expressions/TernaryExpression.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="47">
-          <caret line="16" selection-start-line="16" selection-end-line="16" />
-          <folding>
-            <element signature="e#536#537#0" expanded="true" />
-            <element signature="e#568#569#0" expanded="true" />
-            <element signature="e#592#593#0" expanded="true" />
-            <element signature="e#1138#1139#0" expanded="true" />
-            <element signature="e#1231#1232#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Expressions/BinaryExpression.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="59" selection-start-line="59" selection-end-line="59" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Expressions/UnaryExpression.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-          <folding>
-            <element signature="e#477#478#0" expanded="true" />
-            <element signature="e#520#521#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Prover.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ProveContext.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="708">
-          <caret line="74" selection-start-line="74" selection-end-line="74" />
+        <state relative-caret-position="420">
+          <caret line="44" column="26" selection-start-line="44" selection-start-column="26" selection-end-line="44" selection-end-column="26" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -855,10 +700,225 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ExpressionTest.java">
+    <entry file="jar://$PROJECT_DIR$/../com.microsoft.z3.jar!/com/microsoft/z3/Context.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="44" column="26" lean-forward="true" selection-start-line="44" selection-start-column="26" selection-end-line="44" selection-end-column="26" />
+        <state relative-caret-position="176">
+          <caret line="160" column="80" selection-start-line="160" selection-start-column="80" selection-end-line="160" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/AssignmentBlock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/LoopBlock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1581">
+          <caret line="104" column="47" selection-start-line="104" selection-start-column="47" selection-end-line="104" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CodeBlock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Prover.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="63" selection-start-line="6" selection-start-column="63" selection-end-line="6" selection-end-column="63" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/SourceVisitor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="9" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ProveFunction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="23" column="27" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Expressions/Expression.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Expressions/ArrayExpression.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="382">
+          <caret line="76" column="52" lean-forward="true" selection-start-line="76" selection-start-column="52" selection-end-line="76" selection-end-column="52" />
+          <folding>
+            <element signature="e#474#475#0" expanded="true" />
+            <element signature="e#540#541#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ReturnBlock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="473">
+          <caret line="36" column="39" selection-start-line="36" selection-start-column="15" selection-end-line="36" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Expressions/BinaryExpression.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="86" column="39" selection-start-line="86" selection-start-column="39" selection-end-line="86" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Expressions/ForallExpression.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="39" column="33" lean-forward="true" selection-start-line="39" selection-start-column="33" selection-end-line="39" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#747#748#0" expanded="true" />
+            <element signature="e#826#827#0" expanded="true" />
+            <element signature="e#1073#1074#0" expanded="true" />
+            <element signature="e#1118#1119#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Expressions/TernaryExpression.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="53" column="43" selection-start-line="53" selection-start-column="43" selection-end-line="53" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#457#458#0" expanded="true" />
+            <element signature="e#489#490#0" expanded="true" />
+            <element signature="e#1323#1324#0" expanded="true" />
+            <element signature="e#1373#1374#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Expressions/UnaryExpression.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="70" column="39" selection-start-line="70" selection-start-column="39" selection-end-line="70" selection-end-column="39" />
+          <folding>
+            <element signature="e#477#478#0" expanded="true" />
+            <element signature="e#520#521#0" expanded="true" />
+            <element signature="e#2215#2216#0" expanded="true" />
+            <element signature="e#2242#2243#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Expressions/OperandName.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1581#1582#0" expanded="true" />
+            <element signature="e#1631#1632#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Expressions/Literal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="41" column="37" selection-start-line="41" selection-start-column="37" selection-end-line="41" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#759#760#0" expanded="true" />
+            <element signature="e#786#787#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Expressions/ExpressionVisitor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="47" column="16" lean-forward="true" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/EmptyBlock.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="30" column="38" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#168#169#0" expanded="true" />
+            <element signature="e#200#201#0" expanded="true" />
+            <element signature="e#339#340#0" expanded="true" />
+            <element signature="e#363#364#0" expanded="true" />
+            <element signature="e#451#452#0" expanded="true" />
+            <element signature="e#478#479#0" expanded="true" />
+            <element signature="e#662#663#0" expanded="true" />
+            <element signature="e#708#709#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/antlr4/Goprove.g4">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="246" column="15" selection-start-line="246" selection-start-column="6" selection-end-line="246" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ProveContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1590">
+          <caret line="11" column="34" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -867,18 +927,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/FunctionVisitor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        <state relative-caret-position="136">
+          <caret line="161" column="40" selection-start-line="161" selection-start-column="40" selection-end-line="161" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#390#391#0" expanded="true" />
+            <element signature="e#437#438#0" expanded="true" />
+            <element signature="e#1668#1669#0" expanded="true" />
+            <element signature="e#1723#1724#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ProveContextTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="185" column="30" selection-start-line="185" selection-start-column="30" selection-end-line="185" selection-end-column="30" />
+        <state relative-caret-position="280">
+          <caret line="280" column="89" selection-start-line="280" selection-start-column="89" selection-end-line="280" selection-end-column="89" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -1,5 +1,7 @@
 package Expressions;
 
+import java.util.*;
+
 public class ArrayExpression implements Expression {
     private OperandName operandName;
     private Expression index;
@@ -24,15 +26,18 @@ public class ArrayExpression implements Expression {
 
     @Override
     public Expression replace(Expression a, Expression b) {
+        Expression newIndex = index.replace(a, b);
         if (a instanceof  ArrayExpression) {
             ArrayExpression ae = (ArrayExpression) a;
-            return new TernaryExpression(
-                    new BinaryExpression(index, ae.getIndex(), "=="),
-                    b,
-                    this
-                    );
+            if (ae.getOperandName().getName().equals(operandName.getName())) {
+                return new TernaryExpression(
+                        new BinaryExpression(index, ae.getIndex(), "=="),
+                        b,
+                        new ArrayExpression(operandName, newIndex)
+                );
+            }
         }
-        return this;
+        return new ArrayExpression(operandName, newIndex);
     }
 
     @Override
@@ -65,5 +70,13 @@ public class ArrayExpression implements Expression {
             );
         }
         return this;
+    }
+
+    @Override
+    public Collection<OperandName> getOperands() {
+        Collection<OperandName> c = new HashSet<>();
+        c.add(operandName);
+        c.addAll(index.getOperands());
+        return c;
     }
 }

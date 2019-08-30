@@ -34,7 +34,7 @@ public class ExpressionVisitor extends GoproveBaseVisitor<Expression> {
             } else {
                 UnaryExpressionVisitor unaryExpressionVisitor = new UnaryExpressionVisitor();
                 Expression unaryExpression = ctx.unaryExpr().accept(unaryExpressionVisitor);
-                return new UnaryExpression(ctx.children.get(1).getText(), unaryExpression);
+                return new UnaryExpression(ctx.children.get(0).getText(), unaryExpression);
             }
         }
     }

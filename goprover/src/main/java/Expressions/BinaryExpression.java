@@ -3,6 +3,8 @@ package Expressions;
 import Exceptions.UnimplementedException;
 
 import java.util.Arrays;
+import java.util.Collection;
+import java.util.HashSet;
 
 public final class BinaryExpression implements Expression {
     private final Expression left, right;
@@ -79,6 +81,12 @@ public final class BinaryExpression implements Expression {
         return et;
     }
 
+    @Override
+    public Collection<OperandName> getOperands() {
+        HashSet<OperandName> hs = new HashSet<>(left.getOperands());
+        hs.addAll(right.getOperands());
+        return hs;
+    }
 
 
     private Expression elevateTernary() {

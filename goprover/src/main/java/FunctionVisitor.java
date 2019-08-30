@@ -1,13 +1,48 @@
 import Antlr.GoproveBaseVisitor;
 import Antlr.GoproveParser;
+import Exceptions.UnimplementedException;
 import Expressions.*;
 import org.antlr.v4.runtime.tree.TerminalNode;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class FunctionVisitor extends GoproveBaseVisitor<ProveFunction> {
+
+    private ProveContext proveContext;
+    public FunctionVisitor(ProveContext proveContext) {
+        this.proveContext = proveContext;
+    }
+
+    private class ReturnVisitor extends GoproveBaseVisitor<List<OperandName>> {
+        @Override
+        public List<OperandName> visitResult(GoproveParser.ResultContext ctx) {
+            if (ctx.parameters() == null) {
+                throw new RuntimeException("Unnamed return parameters are not supported!");
+            }
+            if (ctx.parameters().parameterList() == null) {
+                return new ArrayList<>();
+            }
+            ArrayList<OperandName> list = new ArrayList<>();
+            List<GoproveParser.ParameterDeclContext> parameterDecl = ctx.parameters().parameterList().parameterDecl();
+
+            for (GoproveParser.ParameterDeclContext parameterDeclContext : parameterDecl) {
+                if (parameterDeclContext.identifierList() == null) {
+                    throw new RuntimeException("Unnamed return parameters are not supported!");
+                }
+                String t = parameterDeclContext.type().getText();
+                for (TerminalNode node : parameterDeclContext.identifierList().IDENTIFIER()) {
+                    list.add(new OperandName(node.getText(), t));
+                }
+            }
+            return list;
+        }
+    }
+
     private class ParameterVisitor extends GoproveBaseVisitor<List<OperandName>> {
         @Override
         public List<OperandName> visitParameters(GoproveParser.ParametersContext ctx) {
@@ -19,7 +54,7 @@ public class FunctionVisitor extends GoproveBaseVisitor<ProveFunction> {
                                 .IDENTIFIER()
                                 .forEach(i -> list.add(new OperandName(i.getText(), p.type().getText())));
                     } else {
-                        throw new RuntimeException("Unexpected parameter format (no variable name)");
+                        throw new RuntimeException("Unexpected parameter format (no variable name)!");
                     }
                 });
                 return list;
@@ -29,29 +64,56 @@ public class FunctionVisitor extends GoproveBaseVisitor<ProveFunction> {
     }
 
     private class BlockVisitor extends GoproveBaseVisitor<List<CodeBlock>> {
+        private Map<String, OperandName> localDeclarationTable = new HashMap<>();
+        private ProveContext proveContext;
+        public BlockVisitor(ProveContext proveContext) {
+            this.proveContext = proveContext;
+        }
         @Override
         public List<CodeBlock> visitBlock(GoproveParser.BlockContext ctx) {
             List<CodeBlock> list = new ArrayList<>();
-            StatementVisitor visitor = new StatementVisitor();
+            StatementVisitor visitor = new StatementVisitor(proveContext, localDeclarationTable);
             ctx.statementList().statement().forEach(s -> list.add(s.accept(visitor)));
+            localDeclarationTable.forEach((name, _operandName) -> proveContext.undeclareVariable(name));
             return list;
         }
     }
 
     private class StatementVisitor extends GoproveBaseVisitor<CodeBlock> {
+
+        private ProveContext proveContext;
+        private Map<String, OperandName> localDeclarationTable;
+
+        public StatementVisitor(ProveContext proveContext, Map<String, OperandName> localDeclarationTable) {
+            this.proveContext = proveContext;
+            this.localDeclarationTable = localDeclarationTable;
+        }
+
         @Override
         public CodeBlock visitAssignment(GoproveParser.AssignmentContext ctx) {
             ExpressionVisitor expressionVisitor = new ExpressionVisitor();
-            return new AssignmentBlock(ctx.start.getLine(),
-                    ctx.expressionList(0)
-                            .children.stream()
-                            .map(c -> c.accept(expressionVisitor))
-                            .collect(Collectors.toList()),
-                    ctx.expressionList(1).children
-                            .stream()
-                            .map(c -> c.accept(expressionVisitor))
-                            .collect(Collectors.toList()),
-                    ctx.assign_op().getText());
+            Stream<Expression> left = ctx.expressionList(0)
+                    .children.stream()
+                    .map(c -> {
+                        Expression e = c.accept(expressionVisitor);
+                        // Check for use of undeclared variables
+                        e.getOperands().forEach(op -> proveContext.getVariable(op.getName()));
+                        return e;
+                    });
+            Stream<Expression> right = ctx.expressionList(1)
+                    .children.stream()
+                    .map(c -> {
+                        Expression e = c.accept(expressionVisitor);
+                        // Check for use of undeclared variables
+                        e.getOperands().forEach(op -> proveContext.getVariable(op.getName()));
+                        return e;
+                    });
+            return new AssignmentBlock(
+                    ctx.start.getLine(),
+                    left.collect(Collectors.toList()),
+                    right.collect(Collectors.toList()),
+                    ctx.assign_op().getText()
+            );
         }
 
         @Override
@@ -60,7 +122,7 @@ public class FunctionVisitor extends GoproveBaseVisitor<ProveFunction> {
             if (ctx.expression() != null) {
                 condition = ctx.expression().accept(new ExpressionVisitor());
             }
-            List<CodeBlock> body = ctx.block().accept(new BlockVisitor());
+            List<CodeBlock> body = ctx.block().accept(new BlockVisitor(proveContext));
             Expression invariant = new BinaryExpression(new Literal("1"), new Literal("1"), "==");
             if (ctx.loopInv() != null) {
                 invariant = ctx.loopInv().expression().accept(new ExpressionVisitor());
@@ -77,20 +139,39 @@ public class FunctionVisitor extends GoproveBaseVisitor<ProveFunction> {
         public CodeBlock visitAssertStatement(GoproveParser.AssertStatementContext ctx) {
             return new AssertBlock(ctx.start.getLine(), ctx.expression().accept(new ExpressionVisitor()));
         }
+
+        @Override
+        public CodeBlock visitDeclaration(GoproveParser.DeclarationContext ctx) {
+            // TODO: Implement declaration
+            throw new UnimplementedException();
+            /*
+            proveContext.declareVariable();
+            localDeclarationTable.put();
+            return new EmptyBlock(ctx.start.getLine());
+            */
+        }
     }
 
     @Override
     public ProveFunction visitProveFunctionDecl(GoproveParser.ProveFunctionDeclContext ctx) {
         List<OperandName> params = ctx.function().signature().parameters().accept(new ParameterVisitor());
+        List<OperandName> returns;
         if (ctx.function().signature().result() != null) {
-            GoproveParser.ResultContext resultContext = ctx.function().signature().result();
-            if (resultContext.parameters() != null) {
-                // List<String> params2 = resultContext.parameters().accept(new ParameterVisitor());
-                // list.addAll(params2);
-            } else if (resultContext.type() != null) {
-                // list.add(resultContext.type().getText());
-            }
+            returns = ctx.function().signature().result().accept(new ReturnVisitor());
+        } else {
+            returns = new ArrayList<>();
         }
+//        if (ctx.function().signature().result() != null) {
+//            GoproveParser.ResultContext resultContext = ctx.function().signature().result();
+//            if (resultContext.parameters() != null) {
+//                // List<String> params2 = resultContext.parameters().accept(new ParameterVisitor());
+//                // list.addAll(params2);
+//            } else if (resultContext.type() != null) {
+//                // list.add(resultContext.type().getText());
+//            }
+//        }
+        params.forEach(proveContext::declareVariable);
+        returns.forEach(proveContext::declareVariable);
         Expression precondition = null, postcondition = null;
         ExpressionVisitor expressionVisitor = new ExpressionVisitor();
         for (int i = 0; i < ctx.children.size(); i++) {
@@ -111,7 +192,8 @@ public class FunctionVisitor extends GoproveBaseVisitor<ProveFunction> {
         if (postcondition == null) {
             postcondition = new BinaryExpression(new Literal("1"), new Literal("1"), "==");
         }
-        // TODO: add args and returns
-        return new ProveFunction(ctx.function().block().accept(new BlockVisitor()), params, null, precondition, postcondition);
+        // TODO: add returns
+        proveContext.create(precondition, postcondition, ctx.function().block().accept(new BlockVisitor(proveContext)), params);
+        return new ProveFunction(ctx.function().block().accept(new BlockVisitor(proveContext)), params, null, precondition, postcondition);
     }
 }

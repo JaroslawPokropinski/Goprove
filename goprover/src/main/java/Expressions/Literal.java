@@ -1,5 +1,8 @@
 package Expressions;
 
+import java.util.Collection;
+import java.util.Collections;
+
 public class Literal implements SimpleExpression {
     private final String value;
 
@@ -32,5 +35,10 @@ public class Literal implements SimpleExpression {
     @Override
     public Expression removeTernary() {
         return this;
+    }
+
+    @Override
+    public Collection<OperandName> getOperands() {
+        return Collections.emptySet();
     }
 }

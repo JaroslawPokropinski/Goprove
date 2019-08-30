@@ -22,8 +22,12 @@ public class Prover {
                     return ctx.mkOr((BoolExpr)convertExpression(binaryExpression.getLeft()), (BoolExpr)convertExpression(binaryExpression.getRight()));
                 case "<":
                     return ctx.mkLt((ArithExpr) convertExpression(binaryExpression.getLeft()), (ArithExpr)convertExpression(binaryExpression.getRight()));
+                case ">":
+                    return ctx.mkGt((ArithExpr) convertExpression(binaryExpression.getLeft()), (ArithExpr)convertExpression(binaryExpression.getRight()));
                 case ">=":
                     return ctx.mkGe((ArithExpr) convertExpression(binaryExpression.getLeft()), (ArithExpr)convertExpression(binaryExpression.getRight()));
+                case "<=":
+                    return ctx.mkLe((ArithExpr) convertExpression(binaryExpression.getLeft()), (ArithExpr)convertExpression(binaryExpression.getRight()));
                 case "==":
                     return ctx.mkEq(convertExpression(binaryExpression.getLeft()), convertExpression(binaryExpression.getRight()));
                 case "!=":
@@ -46,7 +50,7 @@ public class Prover {
                 case "!":
                     return ctx.mkNot((BoolExpr)convertExpression(unaryExpression.getExpression()));
                 default:
-                    throw new RuntimeException(String.format("Unsupported unary expression '%s'", unaryExpression.getOperator()));
+                    throw new RuntimeException(String.format("Unsupported unary expression '%s'", unaryExpression));
             }
         }
         if (expression instanceof Literal) {
@@ -62,6 +66,18 @@ public class Prover {
             return ctx.mkSelect(
                     ctx.mkArrayConst(arrayExpression.getOperandName().getName(), ctx.getIntSort(), ctx.getIntSort()),
                     convertExpression(arrayExpression.getIndex())
+            );
+        }
+        if (expression instanceof ForallExpression) {
+            ForallExpression fe = (ForallExpression) expression;
+            return ctx.mkForall(
+                    new Expr[]{convertExpression(fe.getIterator())},
+                    convertExpression(fe.getExpression()),
+                    1,
+                    null,
+                    null,
+                    null,
+                    null
             );
         }
         throw new RuntimeException("Unsupported type of expression");

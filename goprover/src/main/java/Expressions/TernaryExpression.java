@@ -1,5 +1,9 @@
 package Expressions;
 
+import Exceptions.UnimplementedException;
+
+import java.util.Collection;
+
 public class TernaryExpression implements Expression {
     private Expression condition;
     private Expression a, b;
@@ -43,5 +47,10 @@ public class TernaryExpression implements Expression {
     @Override
     public Expression removeTernary() {
         return new TernaryExpression(condition, a.removeTernary(), b.removeTernary());
+    }
+
+    @Override
+    public Collection<OperandName> getOperands() {
+        throw new UnimplementedException();
     }
 }
