@@ -2,6 +2,7 @@ import Expressions.ArrayExpression;
 import Expressions.BinaryExpression;
 import Expressions.Expression;
 import Expressions.OperandName;
+import Prove.ProveContext;
 
 import java.util.ArrayList;
 import java.util.List;

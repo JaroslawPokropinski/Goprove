@@ -1,4 +1,4 @@
-package Antlr;// Generated from D:/Programming ssd/Praca dyplomowa/goprover/src/main/antlr4\Goprove.g4 by ANTLR 4.7.2
+// Generated from D:/Programming ssd/Praca dyplomowa/goprover/src/main/antlr4\Goprove.g4 by ANTLR 4.7.2
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 
 /**

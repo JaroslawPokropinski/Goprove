@@ -1,6 +1,7 @@
 import Antlr.GoproveBaseVisitor;
 import Antlr.GoproveLexer;
 import Antlr.GoproveParser;
+import Prove.ProveContext;
 import org.antlr.v4.runtime.CharStreams;
 import org.antlr.v4.runtime.CommonTokenStream;
 import org.antlr.v4.runtime.tree.ParseTree;

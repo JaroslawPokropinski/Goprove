@@ -1,5 +1,8 @@
+package Prove;
+
 import Expressions.Expression;
 import Expressions.OperandName;
+import Prove.ProveContext;
 
 import java.util.List;
 
