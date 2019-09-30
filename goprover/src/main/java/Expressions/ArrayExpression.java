@@ -1,6 +1,6 @@
 package Expressions;
 
-import java.util.*;
+import Prove.ProveContext;
 
 public class ArrayExpression implements Expression {
     private OperandName operandName;
@@ -73,10 +73,8 @@ public class ArrayExpression implements Expression {
     }
 
     @Override
-    public Collection<OperandName> getOperands() {
-        Collection<OperandName> c = new HashSet<>();
-        c.add(operandName);
-        c.addAll(index.getOperands());
-        return c;
+    public void checkDeclaration(ProveContext proveContext) {
+        proveContext.getVariable(operandName.getName());
+        index.checkDeclaration(proveContext);
     }
 }

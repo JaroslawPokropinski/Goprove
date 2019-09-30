@@ -1,13 +1,15 @@
+package Prove;
+// TODO: Fix precondition inside loop
 import Expressions.*;
-import Prove.ProveContext;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class AssertBlock implements CodeBlock {
+public class AssertBlock implements StatementBlock {
     private Expression expression;
     private int line;
+    private boolean first = true;
 
     public AssertBlock(int line, Expression accept) {
         expression = accept;
@@ -25,11 +27,14 @@ public class AssertBlock implements CodeBlock {
 
     @Override
     public Expression calculateCondition(ProveContext proveContext, ProveContext.ProveBlock proveBlock, Expression post) {
-        List<CodeBlock> codeBlocks = new ArrayList<>();
-        for (int i = 0; i < proveBlock.codeBlocks.size() && proveBlock.codeBlocks.get(i) != this; i++) {
-            codeBlocks.add(proveBlock.codeBlocks.get(i));
+        List<StatementBlock> statementBlocks = new ArrayList<>();
+        for (int i = 0; i < proveBlock.statementBlocks.size() && proveBlock.statementBlocks.get(i) != this; i++) {
+            statementBlocks.add(proveBlock.statementBlocks.get(i));
         }
-        proveContext.add(proveContext.getPrecondition(), expression, codeBlocks);
+        if (first) {
+            proveContext.add(proveBlock.precondition, expression, statementBlocks);
+            first = false;
+        }
         return post;
     }
 

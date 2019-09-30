@@ -1,24 +1,28 @@
+package Prove;
+
 import Expressions.Expression;
 import Expressions.OperandName;
 
 import java.util.List;
 
 public class ProveFunction {
-    private List<CodeBlock> codeBlocks;
+    private List<StatementBlock> statementBlocks;
     private List<OperandName> args;
     private List<String> returns;
     private Expression  precondition, postcondition;
 
-    public ProveFunction(List<CodeBlock> codeBlocks, List<OperandName> args, List<String> returns, Expression precondition, Expression postcondition) {
-        this.codeBlocks = codeBlocks;
+    // TODO: are args and returns useless?
+
+    public ProveFunction(List<StatementBlock> statementBlocks, List<OperandName> args, List<String> returns, Expression precondition, Expression postcondition) {
+        this.statementBlocks = statementBlocks;
         this.args = args;
         this.returns = returns;
         this.precondition = precondition;
         this.postcondition = postcondition;
     }
 
-    public List<CodeBlock> getCodeBlocks() {
-        return codeBlocks;
+    public List<StatementBlock> getStatementBlocks() {
+        return statementBlocks;
     }
 
     public List<OperandName> getArgs() {

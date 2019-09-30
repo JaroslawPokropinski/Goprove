@@ -2,21 +2,20 @@ package Expressions;
 
 import Prove.ProveContext;
 
-public class ForallExpression implements Expression {
-
+public class ExistsExpression implements Expression {
     private OperandName iterator;
     private Expression expression;
 
-    public ForallExpression(OperandName iterator, Expression expression) {
-        // TODO: Check for shadowing?
-        if (iterator == null) {
+    public ExistsExpression(OperandName operandName, Expression accept) {
+        if (operandName == null) {
             throw new NullPointerException();
         }
-        if (expression == null) {
+        if (accept == null) {
             throw new NullPointerException();
         }
-        this.iterator = iterator;
-        this.expression = expression;
+
+        this.iterator = operandName;
+        this.expression = accept;
     }
 
     public OperandName getIterator() {
@@ -29,13 +28,12 @@ public class ForallExpression implements Expression {
 
     @Override
     public String toString() {
-        return String.format("(forall %s is %s)", iterator, expression);
+        return String.format("(exists %s is %s)", iterator, expression);
     }
 
     @Override
     public Expression replace(Expression a, Expression b) {
-        // TODO: make iterator ..
-        return new ForallExpression(iterator, expression.replace(a, b));
+        return new ExistsExpression(iterator, expression.replace(a, b));
     }
 
     @Override
@@ -49,7 +47,7 @@ public class ForallExpression implements Expression {
         if (newExpression instanceof TernaryExpression) {
             throw new RuntimeException("Expression in forall statement must be boolean");
         }
-        return new ForallExpression(iterator, newExpression);
+        return new ExistsExpression(iterator, newExpression);
     }
 
     @Override

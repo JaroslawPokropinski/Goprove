@@ -2,9 +2,11 @@ package Expressions;
 
 import Antlr.GoproveBaseVisitor;
 import Antlr.GoproveParser;
+import Exceptions.ParseError;
+import org.antlr.v4.runtime.tree.TerminalNode;
 
 public class ExpressionVisitor extends GoproveBaseVisitor<Expression> {
-    private class UnaryExpressionVisitor extends GoproveBaseVisitor<Expression> {
+    private static class UnaryExpressionVisitor extends GoproveBaseVisitor<Expression> {
         @Override
         public Expression visitUnaryExpr(GoproveParser.UnaryExprContext ctx) {
             if (ctx.primaryExpr() != null) {
@@ -42,12 +44,22 @@ public class ExpressionVisitor extends GoproveBaseVisitor<Expression> {
     public Expression visitExpression(GoproveParser.ExpressionContext ctx) {
         if (ctx.unaryExpr() != null) {
             return ctx.unaryExpr().accept(new UnaryExpressionVisitor());
-        } else if(ctx.operandName() != null) {
-            ExpressionVisitor expressionVisitor = new ExpressionVisitor();
-            return new ForallExpression(new OperandName(ctx.operandName().getText()), ctx.expression(0).accept(expressionVisitor));
-        } else {
+        }
+        if (ctx.children.get(0) instanceof TerminalNode) {
+            TerminalNode node = (TerminalNode) ctx.children.get(0);
+            if (node.getSymbol().getText().equals("forall")) {
+                ExpressionVisitor expressionVisitor = new ExpressionVisitor();
+                return new ForallExpression(new OperandName(ctx.operandName().getText()), ctx.expression(0).accept(expressionVisitor));
+            }
+            if (node.getSymbol().getText().equals("exists")) {
+                ExpressionVisitor expressionVisitor = new ExpressionVisitor();
+                return new ExistsExpression(new OperandName(ctx.operandName().getText()), ctx.expression(0).accept(expressionVisitor));
+            }
+        }
+        if (ctx.expression().size() == 2) {
             ExpressionVisitor expressionVisitor = new ExpressionVisitor();
             return new BinaryExpression(ctx.expression(0).accept(expressionVisitor), ctx.expression(1).accept(expressionVisitor), ctx.children.get(1).getText());
         }
+        throw new ParseError();
     }
 }

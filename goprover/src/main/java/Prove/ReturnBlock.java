@@ -1,11 +1,12 @@
+package Prove;
+
 import Expressions.Expression;
 import Expressions.OperandName;
-import Prove.ProveContext;
 
 import java.util.Collections;
 import java.util.List;
 
-public class ReturnBlock implements CodeBlock {
+public class ReturnBlock implements StatementBlock {
     private int line;
 
     public ReturnBlock(int line) {

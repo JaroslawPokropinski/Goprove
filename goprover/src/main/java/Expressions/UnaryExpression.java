@@ -1,6 +1,6 @@
 package Expressions;
 
-import java.util.Collection;
+import Prove.ProveContext;
 
 public final class UnaryExpression implements Expression {
     private final String operator;
@@ -67,7 +67,7 @@ public final class UnaryExpression implements Expression {
     }
 
     @Override
-    public Collection<OperandName> getOperands() {
-        return expression.getOperands();
+    public void checkDeclaration(ProveContext proveContext) {
+        expression.checkDeclaration(proveContext);
     }
 }

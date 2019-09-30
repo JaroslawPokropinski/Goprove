@@ -1,4 +1,5 @@
 import Expressions.*;
+import com.microsoft.z3.*;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -42,7 +43,43 @@ public class ExpressionTest {
     }
 
     @Test
-    void removeTernary() {
-
+    void z3() {
+        Context ctx = new Context();
+        Solver solver = ctx.mkSolver();
+        Quantifier q = ctx.mkForall(
+                new Expr[]{ctx.mkIntConst("k")},
+                ctx.mkImplies(
+                        ctx.mkAnd(ctx.mkLe(ctx.mkInt(1), ctx.mkIntConst("k")), ctx.mkLe(ctx.mkIntConst("k"), ctx.mkSub(ctx.mkIntConst("j"), ctx.mkInt(1)))),
+                        ctx.mkLe(
+                                (ArithExpr)
+                                        ctx.mkSelect(
+                                                ctx.mkArrayConst("x", ctx.getIntSort(), ctx.getIntSort()),
+                                                ctx.mkSub(ctx.mkIntConst("k"), ctx.mkInt(1))
+                                ),
+                                (ArithExpr)
+                                        ctx.mkSelect(
+                                        ctx.mkArrayConst("x", ctx.getIntSort(), ctx.getIntSort()),
+                                        ctx.mkIntConst("k")
+                                )
+                        )
+                        ),
+                1,
+                null,
+                null,
+                null,
+                null
+        );
+        BoolExpr implication = ctx.mkImplies(ctx.mkAnd(ctx.mkGe(ctx.mkIntConst("j"), ctx.mkInt(2)), q), ctx.mkLe((ArithExpr)
+                        ctx.mkSelect(
+                                ctx.mkArrayConst("x", ctx.getIntSort(), ctx.getIntSort()),
+                                ctx.mkSub(ctx.mkIntConst("j"), ctx.mkInt(2))
+                        ),
+                (ArithExpr)
+                        ctx.mkSelect(
+                                ctx.mkArrayConst("x", ctx.getIntSort(), ctx.getIntSort()),
+                                ctx.mkSub(ctx.mkIntConst("j"), ctx.mkInt(1))
+                        )));
+        solver.add(ctx.mkNot(implication));
+        Assertions.assertEquals(solver.check(), Status.UNSATISFIABLE);
     }
 }

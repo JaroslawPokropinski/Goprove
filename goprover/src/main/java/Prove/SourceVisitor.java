@@ -1,6 +1,7 @@
+package Prove;
+
 import Antlr.GoproveBaseVisitor;
 import Antlr.GoproveParser;
-import Prove.ProveContext;
 
 import java.util.List;
 

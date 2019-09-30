@@ -1,19 +1,20 @@
+package Prove;
+
 import Expressions.*;
-import Prove.ProveContext;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class LoopBlock implements CodeBlock {
+public class LoopBlock implements StatementBlock {
     private Expression condition;
-    private List<CodeBlock> body;
+    private List<StatementBlock> body;
     private Expression invariant;
     private int line;
     private List<OperandName> var = null;
     private List<Expression> postAssertion = new ArrayList<>();
 
-    public LoopBlock(int line, Expression condition, List<CodeBlock> body, Expression invariant) {
+    public LoopBlock(int line, Expression condition, List<StatementBlock> body, Expression invariant) {
         if (condition == null) {
             throw new NullPointerException("At line: " + line);
         }
@@ -29,24 +30,12 @@ public class LoopBlock implements CodeBlock {
         this.invariant = invariant;
     }
 
-    public Expression getCondition() {
-        return condition;
-    }
-
-    public List<CodeBlock> getBody() {
-        return body;
-    }
-
-    public Expression getInvariant() {
-        return invariant;
-    }
-
     @Override
     public List<OperandName> getVariables() {
         if (var == null) {
             var = new ArrayList<>();
-            for (CodeBlock codeBlock : body) {
-                codeBlock
+            for (StatementBlock statementBlock : body) {
+                statementBlock
                         .getVariables()
                         .forEach((v) -> {
                             if (!var.contains(v)) {
@@ -91,7 +80,7 @@ public class LoopBlock implements CodeBlock {
         stringBuilder.append("loop ");
         stringBuilder.append(condition);
         stringBuilder.append(" {\n");
-        for (CodeBlock block : body) {
+        for (StatementBlock block : body) {
             stringBuilder.append(block.toString());
             stringBuilder.append("\n");
         }
@@ -121,6 +110,5 @@ public class LoopBlock implements CodeBlock {
             proveContext.boolList.add(false);
         }
         return invariant;
-        // throw new RuntimeException("Cannot prove: not condition && invariant => post, where condition: " + condition + ", invariant: " + strongInvariant + "post: " + post);
     }
 }

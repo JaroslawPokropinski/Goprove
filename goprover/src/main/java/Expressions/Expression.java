@@ -1,10 +1,11 @@
 package Expressions;
 
-import java.util.Collection;
+
+import Prove.ProveContext;
 
 public interface Expression {
     Expression replace(Expression a, Expression b);
     boolean contains(Expression a);
     Expression removeTernary();
-    Collection<OperandName> getOperands();
+    void checkDeclaration(ProveContext proveContext);
 }

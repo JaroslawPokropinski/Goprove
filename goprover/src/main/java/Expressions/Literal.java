@@ -1,7 +1,6 @@
 package Expressions;
 
-import java.util.Collection;
-import java.util.Collections;
+import Prove.ProveContext;
 
 public class Literal implements SimpleExpression {
     private final String value;
@@ -38,7 +37,6 @@ public class Literal implements SimpleExpression {
     }
 
     @Override
-    public Collection<OperandName> getOperands() {
-        return Collections.emptySet();
+    public void checkDeclaration(ProveContext proveContext) {
     }
 }

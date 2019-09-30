@@ -1,17 +1,19 @@
+package Prove;
+
 import Expressions.ArrayExpression;
 import Expressions.BinaryExpression;
 import Expressions.Expression;
 import Expressions.OperandName;
-import Prove.ProveContext;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class AssignmentBlock implements CodeBlock {
+public class AssignmentBlock implements StatementBlock {
     private List<Expression> left, right;
     private String op;
     private int line;
 
+    // TODO: differentiate operators
     public AssignmentBlock(int line, List<Expression> left, List<Expression> right, String op) {
         this.left = left;
         this.right = right;

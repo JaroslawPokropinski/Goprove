@@ -1,6 +1,9 @@
 import Antlr.GoproveBaseVisitor;
 import Antlr.GoproveLexer;
 import Antlr.GoproveParser;
+import Prove.ProveContext;
+import Prove.ProveFunction;
+import Prove.SourceVisitor;
 import org.antlr.v4.runtime.CharStreams;
 import org.antlr.v4.runtime.CommonTokenStream;
 import org.antlr.v4.runtime.tree.ParseTree;
@@ -241,11 +244,10 @@ class ProveContextTest {
                 "\n" +
                 "//@ prove\n" +
                 "//@ pre 1 == 1\n" +
-                "//@ post (forall p integer !(0 <= p && p < n) || x[p] == y)\n" +
+                "//@ post (forall j integer !(0 <= j && j < n) || x[j] == y)\n" +
                 "func fillExample(x []int, n int, y int) {\n" +
-                "\tvar i int\n" +
-                "\ti = 0\n" +
-                "\t//@ inv (forall q integer !(0 <= q && q < i) || x[q] == y)\n" +
+                "\tvar i int = 0\n" +
+                "\t//@ inv (forall j integer !(0 <= j && j < i) || x[j] == y)\n" +
                 "\tfor i < n {\n" +
                 "\t\tx[i] = y\n" +
                 "\t}\n" +
@@ -274,19 +276,24 @@ class ProveContextTest {
                 "\n" +
                 "//@ prove\n" +
                 "//@ pre 1 == 1\n" +
-                "//@ post (forall l integer !(1 <= l && l < n) || x[l - 1] <= x[l])\n" +
+                "//@ post (forall k integer !(1 <= k && k < n) || x[k - 1] <= x[k])\n" +
                 "func sortExample(x []int, n int) {\n" +
-                "\tvar i int\n" +
-                "\ti = 1\n" +
-                "\t//@ inv (forall r integer !(1 <= r && r < i) || x[r - 1] <= x[r])\n" +
+                "\tvar i int = 1\n" +
+                "\t//@ inv (forall k integer !(1 <= k && k < i) || x[k - 1] <= x[k])\n" +
                 "\tfor i < n {\n" +
-                "\t\tj = i\n" +
-                "\t\t//@ inv (forall p integer !(1 <= p && p < j) || x[p - 1] <= x[p]) && (forall q integer !(j < q && q < i + 1) || x[q - 1] <= x[q]) && j <= i\n" +
+                "\t\tvar j int = i\n" +
+                "\t\t//@ inv (forall k integer !(k >= 1 && k <= j-1) || x[k - 1] <= x[k]) && (forall k integer !(k >= j + 1 && k <= i) || x[k - 1] <= x[k]) && (!(1 <= j && j < i) || x[j-1] <= x[j+1]) && j <= i\n" +
                 "\t\tfor j > 0 && x[j-1] > x[j] {\n" +
-                "\t\t\tt = x[j]\n" +
+                "\t\t\tvar t int = x[j]\n" +
+                "\t\t\t//@ assert (!(2 <= j) || x[j-2] <= x[j-1])\n" +
                 "\t\t\tx[j] = x[j-1]\n" +
                 "\t\t\tx[j-1] = t\n" +
                 "\t\t\tj = j - 1\n" +
+                "\t\t\t//@ assert (forall k integer !(k >= 1 && k <= j-1) || x[k - 1] <= x[k])\n" +
+                "\t\t\t//@ assert (forall k integer !(k >= j + 1 && k <= i) || x[k - 1] <= x[k])\n" +
+                "\t\t\t//@ assert (!(j >= 1 && j <= i) || x[j-1] <= x[j+1])\n" +
+                "\t\t\t// @ assert (x[j-1] <= x[j+1])\n" +
+                "\t\t\t//@ assert j < i\n" +
                 "\t\t}\n" +
                 "\t\ti = i + 1\n" +
                 "\t}\n" +
@@ -307,4 +314,43 @@ class ProveContextTest {
         List<Boolean> trues = new ArrayList<>(Collections.nCopies(t.size(), true));
         Assertions.assertIterableEquals(trues, t);
     }
+
+    @Test
+    void proverShouldProveIf() {
+        // ex4.go
+        String code = "package ex1\n" +
+                "\n" +
+                "//@ prove\n" +
+                "//@ pre 1 == 1\n" +
+                "//@ post (j >= 0 || i == 1) && (j < 0 || i == 2)\n" +
+                "func ifExample(j int) (i int) {\n" +
+                "\ti = 0\n" +
+                "\n" +
+                "\tif j < 0 {\n" +
+                "\t\ti = 1\n" +
+                "\t}\n" +
+                "\n" +
+                "\tif j >= 0 {\n" +
+                "\t\ti = 2\n" +
+                "\t}\n" +
+                "\n" +
+                "\treturn\n" +
+                "}";
+
+        GoproveLexer grammarLexer = new GoproveLexer (CharStreams.fromString(code));
+        grammarLexer.removeErrorListeners();
+        CommonTokenStream tokens = new CommonTokenStream(grammarLexer);
+        GoproveParser parser = new GoproveParser(tokens);
+        ParseTree tree = parser.sourceFile();
+
+        ProveContext proveContext = new ProveContext();
+        GoproveBaseVisitor<ProveFunction> visitor = new SourceVisitor(proveContext);
+        visitor.visit(tree);
+        List<Boolean> t = proveContext.prove();
+
+        List<Boolean> trues = new ArrayList<>(Collections.nCopies(t.size(), true));
+        Assertions.assertIterableEquals(trues, t);
+    }
+
+    //TODO: test else and else if
 }

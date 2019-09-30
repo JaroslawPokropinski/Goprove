@@ -1,8 +1,7 @@
 package Expressions;
 
 import Exceptions.UnimplementedException;
-
-import java.util.Collection;
+import Prove.ProveContext;
 
 public class TernaryExpression implements Expression {
     private Expression condition;
@@ -50,7 +49,7 @@ public class TernaryExpression implements Expression {
     }
 
     @Override
-    public Collection<OperandName> getOperands() {
+    public void checkDeclaration(ProveContext proveContext) {
         throw new UnimplementedException();
     }
 }

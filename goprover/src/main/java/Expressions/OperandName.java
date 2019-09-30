@@ -1,8 +1,7 @@
 package Expressions;
 
 
-import java.util.Collection;
-import java.util.Collections;
+import Prove.ProveContext;
 
 public final class OperandName implements SimpleExpression {
     private final String name;
@@ -20,7 +19,7 @@ public final class OperandName implements SimpleExpression {
 
     @Override
     public String toString() {
-        return String.format("%s %s", type, name);
+        return String.format("%s", name);
     }
 
     public String getName() {
@@ -62,7 +61,7 @@ public final class OperandName implements SimpleExpression {
     }
 
     @Override
-    public Collection<OperandName> getOperands() {
-        return Collections.singleton(this);
+    public void checkDeclaration(ProveContext proveContext) {
+        proveContext.getVariable(name);
     }
 }

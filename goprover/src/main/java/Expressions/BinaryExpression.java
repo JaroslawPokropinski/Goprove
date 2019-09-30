@@ -1,10 +1,8 @@
 package Expressions;
 
-import Exceptions.UnimplementedException;
+import Prove.ProveContext;
 
 import java.util.Arrays;
-import java.util.Collection;
-import java.util.HashSet;
 
 public final class BinaryExpression implements Expression {
     private final Expression left, right;
@@ -82,10 +80,9 @@ public final class BinaryExpression implements Expression {
     }
 
     @Override
-    public Collection<OperandName> getOperands() {
-        HashSet<OperandName> hs = new HashSet<>(left.getOperands());
-        hs.addAll(right.getOperands());
-        return hs;
+    public void checkDeclaration(ProveContext proveContext) {
+        left.checkDeclaration(proveContext);
+        right.checkDeclaration(proveContext);
     }
 
 

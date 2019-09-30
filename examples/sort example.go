@@ -3,7 +3,7 @@ package ex1
 
 //@ prove
 //@ pre 1 == 1
-//@ post (forall k integer !(1 <= k && k < n) || x[k - 1] <= x[k])
+//@ post (forall k integer !(1 <= k && k < n) || x[k - 1] <= x[k]) && (forall k integer !(1 <= k && k < n) || !(forall r integer (1 <= r && r < n) && x[k] == x'old[r]))
 func sortExample(x []int, n int) {
 	var i int = 1
 	//@ inv (forall k integer !(1 <= k && k < i) || x[k - 1] <= x[k])
@@ -19,7 +19,6 @@ func sortExample(x []int, n int) {
 			//@ assert (forall k integer !(k >= 1 && k <= j-1) || x[k - 1] <= x[k])
 			//@ assert (forall k integer !(k >= j + 1 && k <= i) || x[k - 1] <= x[k])
 			// @ assert (!(j == i - 1) || x[j-1] <= x[j+1])
-			// @ assert (x[j-1] <= x[j+1])
 			//@ assert j < i
 		}
 		i = i + 1

@@ -259,12 +259,19 @@ receiver
 
 //VarDecl     = "var" ( VarSpec | "(" { VarSpec ";" } ")" ) .
 //VarSpec     = IdentifierList ( Type [ "=" ExpressionList ] | "=" ExpressionList ) .
+//varDecl
+//    : 'var' ( varSpec | '(' ( varSpec eos )* ')' )
+//    ;
 varDecl
-    : 'var' ( varSpec | '(' ( varSpec eos )* ')' )
+    : 'var' varSpec
     ;
 
+//varSpec
+//    : identifierList ( type ( '=' expressionList )? | '=' expressionList )
+//    ;
+
 varSpec
-    : identifierList ( type ( '=' expressionList )? | '=' expressionList )
+    : identifierList type ( '=' expressionList )?
     ;
 
 
@@ -758,6 +765,7 @@ expression
     | expression ('&&') expression
     | expression ('||') expression
     | 'forall' operandName 'integer' expression
+    | 'exists' operandName 'integer' expression
     ;
 
 unaryExpr
