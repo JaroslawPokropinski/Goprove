@@ -14,7 +14,7 @@ public class EmptyBlock implements StatementBlock {
     }
 
     @Override
-    public Expression calculateCondition(ProveContext proveContext, ProveContext.ProveBlock proveBlock, Expression post) {
+    public Expression calculateCondition(ProveContext proveContext, ProveBlock proveBlock, Expression post) {
         return post;
     }
 

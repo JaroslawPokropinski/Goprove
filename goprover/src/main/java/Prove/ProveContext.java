@@ -17,11 +17,16 @@ public class ProveContext {
     public ProveContext(){}
 
     public void create(Expression precondition, Expression postcondition, List<StatementBlock> code, List<OperandName> args) {
-        this.toProve.add(new ProveBlock(code, precondition, postcondition));
+        this.toProve.add(new ProveBlock(code, precondition, postcondition, "Failed to prove postcondition!"));
         this.args = args;
     }
 
 
+
+
+    public void add(Expression precondition, Expression postcondition, List<StatementBlock> code, String error) {
+        toProve.add(new ProveBlock(code, precondition, postcondition, error));
+    }
 
     public void add(Expression precondition, Expression postcondition, List<StatementBlock> code) {
         toProve.add(new ProveBlock(code, precondition, postcondition));
@@ -33,14 +38,14 @@ public class ProveContext {
 
     public void declareVariable(OperandName op) {
         if (declarationTable.containsKey(op.getName())) {
-            throw new RuntimeException(String.format("Variable %s already defined", op.getName()));
+            throw new RuntimeException(String.format("Variable %s already defined!", op.getName()));
         }
         declarationTable.put(op.getName(), op);
     }
 
     public void undeclareVariable(String op) {
         if (!declarationTable.containsKey(op)) {
-            throw new RuntimeException(String.format("Variable %s is not defined (cannot be undeclared)", op));
+            throw new RuntimeException(String.format("Variable %s is not defined (cannot be undeclared)!", op));
         }
         declarationTable.remove(op);
     }
@@ -51,9 +56,24 @@ public class ProveContext {
 
     public OperandName getVariable(String op) {
         if (!declarationTable.containsKey(op)) {
-            throw new RuntimeException(String.format("Variable %s is not defined", op));
+            throw new RuntimeException(String.format("Variable %s is not defined!", op));
         }
         return declarationTable.get(op);
+    }
+
+    public void onError(String error) {
+        System.out.println(error);
+        boolList.add(false);
+    }
+
+    private void onSuccess() {
+        boolList.add(true);
+    }
+
+    public void proveImpl(Expression left, Expression right, String error) {
+        if(!prover.implies(left, right)) {
+            onError(error);
+        }
     }
 
     public List<Boolean> prove() {
@@ -97,33 +117,11 @@ public class ProveContext {
             }
             boolean im = prover.implies(toProve.get(j).precondition, postAssertion);
             if(!im) {
-                System.out.println(String.format("Error (invariant doesn't hold) at: %s", list.get(0).getLine()));
+                onError(toProve.get(j).onProveFail());
+            } else {
+                onSuccess();
             }
-            boolList.add(im);
         }
         return boolList;
-    }
-
-    public static class ProveBlock {
-        public List<StatementBlock> statementBlocks;
-        public Expression precondition, postcondition;
-
-        public ProveBlock(List<StatementBlock> statementBlocks, Expression precondition, Expression postcondition) {
-            this.statementBlocks = statementBlocks;
-            this.precondition = precondition;
-            this.postcondition = postcondition;
-        }
-
-        @Override
-        public String toString() {
-            StringBuilder stringBuilder = new StringBuilder();
-            stringBuilder.append(String.format("{pre: %s}\n", precondition));
-            for (StatementBlock cb : statementBlocks) {
-                stringBuilder.append(cb);
-                stringBuilder.append("\n");
-            }
-            stringBuilder.append(String.format("{post: %s}\n", postcondition));
-            return stringBuilder.toString();
-        }
     }
 }

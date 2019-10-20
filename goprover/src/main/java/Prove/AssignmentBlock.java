@@ -55,7 +55,7 @@ public class AssignmentBlock implements StatementBlock {
     }
 
     @Override
-    public Expression calculateCondition(ProveContext proveContext, ProveContext.ProveBlock proveBlock, Expression post) {
+    public Expression calculateCondition(ProveContext proveContext, ProveBlock proveBlock, Expression post) {
         Expression newExpression = post;
         for (int j = 0; j < getLeft().size(); j++) {
             newExpression = newExpression.replace(getLeft().get(j), getRight().get(j));

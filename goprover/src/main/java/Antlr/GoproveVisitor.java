@@ -634,6 +634,12 @@ public interface GoproveVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitLoopInv(GoproveParser.LoopInvContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link GoproveParser#loopVar}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitLoopVar(GoproveParser.LoopVarContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link GoproveParser#assertStatement}.
 	 * @param ctx the parse tree
 	 * @return the visitor result

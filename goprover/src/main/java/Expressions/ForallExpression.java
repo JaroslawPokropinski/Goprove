@@ -8,7 +8,6 @@ public class ForallExpression implements Expression {
     private Expression expression;
 
     public ForallExpression(OperandName iterator, Expression expression) {
-        // TODO: Check for shadowing?
         if (iterator == null) {
             throw new NullPointerException();
         }
@@ -34,7 +33,6 @@ public class ForallExpression implements Expression {
 
     @Override
     public Expression replace(Expression a, Expression b) {
-        // TODO: make iterator ..
         return new ForallExpression(iterator, expression.replace(a, b));
     }
 

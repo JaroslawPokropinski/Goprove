@@ -5,7 +5,7 @@ import Antlr.GoproveParser;
 
 import java.util.List;
 
-public class SourceVisitor extends GoproveBaseVisitor<ProveFunction> {
+public class SourceVisitor extends GoproveBaseVisitor<Void> {
 
     private ProveContext proveContext;
     public SourceVisitor(ProveContext proveContext) {
@@ -14,12 +14,12 @@ public class SourceVisitor extends GoproveBaseVisitor<ProveFunction> {
     }
 
     @Override
-    public ProveFunction visitSourceFile(GoproveParser.SourceFileContext ctx) {
+    public Void visitSourceFile(GoproveParser.SourceFileContext ctx) {
         List<GoproveParser.TopLevelDeclContext> list = ctx.topLevelDecl();
         FunctionVisitor visitor = new FunctionVisitor(proveContext);
         for (GoproveParser.TopLevelDeclContext topLevelDeclContext : list) {
             if (topLevelDeclContext.proveFunctionDecl() != null) {
-                return topLevelDeclContext.proveFunctionDecl().accept(visitor);
+                topLevelDeclContext.proveFunctionDecl().accept(visitor);
             }
         }
         return null;

@@ -10,7 +10,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class FunctionVisitor extends GoproveBaseVisitor<ProveFunction> {
+public class FunctionVisitor extends GoproveBaseVisitor<Void> {
 
     private ProveContext proveContext;
     public FunctionVisitor(ProveContext proveContext) {
@@ -118,12 +118,19 @@ public class FunctionVisitor extends GoproveBaseVisitor<ProveFunction> {
         @Override
         public StatementBlock visitForStmt(GoproveParser.ForStmtContext ctx) {
             // e.getOperands().forEach(op -> proveContext.getVariable(op.getName()));
-            Expression invariant = new BinaryExpression(new Literal("1"), new Literal("1"), "==");
+            Expression invariant = new BinaryExpression(new Literal("0"), new Literal("0"), "==");
             if (ctx.loopInv() != null) {
                 invariant = ctx.loopInv().expression().accept(new ExpressionVisitor());
                 // Check for use of undeclared variables
                 invariant.checkDeclaration(proveContext);
             }
+            Expression variant = Literal.zero;
+            if (ctx.loopVar() != null) {
+                variant = ctx.loopVar().expression().accept(new ExpressionVisitor());
+                // Check for use of undeclared variables
+                variant.checkDeclaration(proveContext);
+            }
+
 
             if (ctx.expression() == null) {
                 // TODO: handle for statements with other structure
@@ -133,7 +140,7 @@ public class FunctionVisitor extends GoproveBaseVisitor<ProveFunction> {
             condition.checkDeclaration(proveContext);
             List<StatementBlock> body = ctx.block().accept(new BlockVisitor(proveContext));
 
-            return new LoopBlock(ctx.start.getLine(), condition, body, invariant);
+            return new LoopBlock(ctx.start.getLine(), condition, body, invariant, variant);
         }
 
         @Override
@@ -195,7 +202,7 @@ public class FunctionVisitor extends GoproveBaseVisitor<ProveFunction> {
     }
 
     @Override
-    public ProveFunction visitProveFunctionDecl(GoproveParser.ProveFunctionDeclContext ctx) {
+    public Void visitProveFunctionDecl(GoproveParser.ProveFunctionDeclContext ctx) {
         List<OperandName> params = ctx.function().signature().parameters().accept(new ParameterVisitor());
         List<OperandName> returns;
         if (ctx.function().signature().result() != null) {
@@ -232,8 +239,7 @@ public class FunctionVisitor extends GoproveBaseVisitor<ProveFunction> {
         if (postcondition == null) {
             postcondition = new BinaryExpression(new Literal("1"), new Literal("1"), "==");
         }
-        // TODO: add returns
         proveContext.create(precondition, postcondition, ctx.function().block().accept(new BlockVisitor(proveContext)), params);
-        return new ProveFunction(ctx.function().block().accept(new BlockVisitor(proveContext)), params, null, precondition, postcondition);
+        return null;
     }
 }

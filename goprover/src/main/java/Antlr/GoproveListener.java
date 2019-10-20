@@ -1047,6 +1047,16 @@ public interface GoproveListener extends ParseTreeListener {
 	 */
 	void exitLoopInv(GoproveParser.LoopInvContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link GoproveParser#loopVar}.
+	 * @param ctx the parse tree
+	 */
+	void enterLoopVar(GoproveParser.LoopVarContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link GoproveParser#loopVar}.
+	 * @param ctx the parse tree
+	 */
+	void exitLoopVar(GoproveParser.LoopVarContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link GoproveParser#assertStatement}.
 	 * @param ctx the parse tree
 	 */

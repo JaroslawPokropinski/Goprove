@@ -29,7 +29,7 @@ public class IfBlock implements StatementBlock {
     }
 
     @Override
-    public Expression calculateCondition(ProveContext proveContext, ProveContext.ProveBlock proveBlock, Expression post) {
+    public Expression calculateCondition(ProveContext proveContext, ProveBlock proveBlock, Expression post) {
         Expression left, right;
         if (elBody == null) {
             left = new BinaryExpression(new UnaryExpression("!", condition), post, "&&");

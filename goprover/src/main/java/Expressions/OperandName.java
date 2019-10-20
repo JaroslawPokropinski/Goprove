@@ -17,6 +17,14 @@ public final class OperandName implements SimpleExpression {
         this.type = type;
     }
 
+    private static int anonCount = 0;
+
+    public static OperandName createAnonymous() {
+        OperandName op = new OperandName(String.format("anon'%d", anonCount));
+        anonCount++;
+        return op;
+    }
+
     @Override
     public String toString() {
         return String.format("%s", name);

@@ -1263,6 +1263,18 @@ public class GoproveBaseListener implements GoproveListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterLoopVar(GoproveParser.LoopVarContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitLoopVar(GoproveParser.LoopVarContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterAssertStatement(GoproveParser.AssertStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}

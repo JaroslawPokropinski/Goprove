@@ -454,7 +454,7 @@ recvStmt
 //ForStmt = "for" [ Condition | ForClause | RangeClause ] Block .
 //Condition = Expression .
 forStmt
-    : loopInv? 'for' ( expression | forClause | rangeClause )? block
+    : loopInv? loopVar? 'for' ( expression | forClause | rangeClause )? block
     ;
 
 //ForClause = [ InitStmt ] ";" [ Condition ] ";" [ PostStmt ] .
@@ -792,6 +792,10 @@ proveFunctionDecl
 
 loopInv
     : PRAGMA 'inv' expression
+    ;
+
+loopVar
+    : PRAGMA 'var' expression
     ;
 
 assertStatement

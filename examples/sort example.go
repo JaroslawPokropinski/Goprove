@@ -4,7 +4,7 @@ package ex1
 //@ prove
 //@ pre 1 == 1
 //@ post (forall k integer !(1 <= k && k < n) || x[k - 1] <= x[k]) && (forall k integer !(1 <= k && k < n) || !(forall r integer (1 <= r && r < n) && x[k] == x'old[r]))
-func sortExample(x []int, n int) {
+func sortExample2(x []int, n int) {
 	var i int = 1
 	//@ inv (forall k integer !(1 <= k && k < i) || x[k - 1] <= x[k])
 	for i < n {

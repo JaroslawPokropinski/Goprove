@@ -5,6 +5,8 @@ import Prove.ProveContext;
 public class Literal implements SimpleExpression {
     private final String value;
 
+    public static Literal zero = new Literal("0");
+
     public Literal(String value) {
         if (value == null) {
             throw new NullPointerException();

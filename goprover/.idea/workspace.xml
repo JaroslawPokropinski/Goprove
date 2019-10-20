@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="goprover:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="93d5a541-7120-415c-82d1-70fa0a01f2a4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Exceptions/ParseError.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Expressions/ExistsExpression.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../examples/Untitled-1.go" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../examples/ex4.go" beforeDir="false" afterPath="$PROJECT_DIR$/../examples/ex4.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/Jarek.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/Jarek.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/goprover_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/main/java/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Prove/ProveBlock.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../examples/sort example.go" beforeDir="false" afterPath="$PROJECT_DIR$/../examples/sort example.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/com_microsoft_z3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/com_microsoft_z3.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/antlr4/Goprove.g4" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/antlr4/Goprove.g4" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Antlr/GoproveBaseListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Antlr/GoproveBaseListener.java" afterDir="false" />
@@ -16,33 +21,21 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/Antlr/GoproveListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Antlr/GoproveListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Antlr/GoproveParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Antlr/GoproveParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Antlr/GoproveVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Antlr/GoproveVisitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Expressions/ArrayExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Expressions/ArrayExpression.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Expressions/BinaryExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Expressions/BinaryExpression.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Expressions/Expression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Expressions/Expression.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Expressions/ExpressionVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Expressions/ExpressionVisitor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Expressions/ForallExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Expressions/ForallExpression.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Expressions/Literal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Expressions/Literal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Expressions/OperandName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Expressions/OperandName.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Expressions/TernaryExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Expressions/TernaryExpression.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Expressions/UnaryExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Expressions/UnaryExpression.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Prove/AssertBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Prove/AssertBlock.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Prove/AssignmentBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Prove/AssignmentBlock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Prove/BaseListener.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Prove/EmptyBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Prove/EmptyBlock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Prove/ExpressionConverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Prove/ExpressionConverter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Prove/FunctionVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Prove/FunctionVisitor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Prove/IfBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Prove/IfBlock.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Prove/LoopBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Prove/LoopBlock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Prove/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Prove/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Prove/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Prove/ProveContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Prove/ProveContext.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Prove/ProveFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Prove/ProveFunction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Prove/Prover.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Prove/Prover.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Prove/ProveFunction.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Prove/ReturnBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Prove/ReturnBlock.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Prove/SourceVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Prove/SourceVisitor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Prove/StatementBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Prove/StatementBlock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Prove/Z3Converter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Prove/Z3Converter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Prove/Z3Prover.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Prove/Z3Prover.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ExpressionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ExpressionTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ProveContextTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ProveContextTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -80,10 +73,10 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/Antlr" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="project.structure.side.proportion" value="0.3" />
     <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
@@ -120,6 +113,19 @@
     </option>
   </component>
   <component name="RunManager" selected="JUnit.ProveContextTest">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="goprover" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value=".*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ExpressionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="goprover" />
       <option name="PACKAGE_NAME" value="" />
@@ -148,16 +154,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProveContextTest.proverShouldProveArrayAndOld" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="goprover" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="ProveContextTest" />
-      <option name="METHOD_NAME" value="proverShouldProveArrayAndOld" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ProveContextTest.proverShouldProveArrayForAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="goprover" />
       <option name="PACKAGE_NAME" value="" />
@@ -171,10 +167,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.ProveContextTest" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.ProveContextTest.proverShouldProveArrayForAll" />
         <item itemvalue="JUnit.ExpressionTest.z3" />
         <item itemvalue="JUnit.ExpressionTest" />
-        <item itemvalue="JUnit.ProveContextTest.proverShouldProveArrayAndOld" />
       </list>
     </recent_temporary>
   </component>
@@ -222,6 +218,19 @@
           <line>15</line>
           <option name="timeStamp" value="38" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/Prove/ProveContext.java</url>
+          <line>112</line>
+          <option name="timeStamp" value="41" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/test/java/ProveContextTest.java</url>
+          <line>275</line>
+          <properties class="ProveContextTest" method="proverShouldProveArrayForAll">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
@@ -229,6 +238,8 @@
         <watch expression="prev" />
         <watch expression="((TernaryExpression)expression).a" custom="Expressions.TernaryExpression" />
         <watch expression="((BinaryExpression)((BinaryExpression)postAssertion).left).left" custom="Expressions.BinaryExpression" />
+        <watch expression="toProve.get(1)" />
+        <watch expression="toProve.get(1).statementBlocks" />
       </configuration>
       <configuration name="Application">
         <watch expression="list.get(3)" />
