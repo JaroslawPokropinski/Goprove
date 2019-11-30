@@ -239,6 +239,40 @@ class ProveContextTest {
     }
 
     @Test
+    void shouldInferInvariant() {
+        String code = "package ex1\n" +
+                "\n" +
+                "//@ prove\n" +
+                "//@ pre x >= 0 && y > 0\n" +
+                "//@ post q*y + r == x'old && r >= 0 && r < y'old\n" +
+                "func div(x int, y int) (q, r int) {\n" +
+                "\tq = 0\n" +
+                "\tr = x\n" +
+                "\t//@ inv q * y + r == x && r >= 0\n" +
+                "\t//@ var r\n" +
+                "\tfor r >= y {\n" +
+                "\t\tr = r - y\n" +
+                "\t\tq = q + 1\n" +
+                "\t}\n" +
+                "\treturn\n" +
+                "}\n";
+
+        GoproveLexer grammarLexer = new GoproveLexer (CharStreams.fromString(code));
+        grammarLexer.removeErrorListeners();
+        CommonTokenStream tokens = new CommonTokenStream(grammarLexer);
+        GoproveParser parser = new GoproveParser(tokens);
+        ParseTree tree = parser.sourceFile();
+
+        ProveContext proveContext = new ProveContext();
+        GoproveBaseVisitor<Void> visitor = new SourceVisitor(proveContext);
+        visitor.visit(tree);
+        List<Boolean> t = proveContext.prove();
+
+        List<Boolean> trues = new ArrayList<>(Collections.nCopies(t.size(), true));
+        Assertions.assertIterableEquals(trues, t);
+    }
+
+    @Test
     void proverShouldProveArrayForAll0() {
         // ex6.go
         String code = "package ex1\n" +

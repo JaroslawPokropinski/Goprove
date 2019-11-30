@@ -11,6 +11,7 @@
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/commons/commons-lang3/3.8.1/commons-lang3-3.8.1.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$PROJECT_DIR$/../com.microsoft.z3.jar" path-in-jar="/" />
       <element id="library" level="project" name="com.microsoft.z3" />
+      <element id="file-copy" path="C:/Programs/z3/libz3.dll" />
     </root>
   </artifact>
 </component>

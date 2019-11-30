@@ -16,11 +16,12 @@ public class ProveBlock {
         this.error = error;
     }
 
-    public ProveBlock(List<StatementBlock> statementBlocks, Expression precondition, Expression postcondition) {
-        this.statementBlocks = statementBlocks;
-        this.precondition = precondition;
-        this.postcondition = postcondition;
-        this.error = "Failed to prove block!";
+    Expression calculateCondition(ProveModule proveModule) {
+        Expression calculatedAssertion = postcondition;
+        for (int i = statementBlocks.size() - 1; i >= 0; i--) {
+            calculatedAssertion = statementBlocks.get(i).calculateCondition(proveModule, this, calculatedAssertion);
+        }
+        return calculatedAssertion;
     }
 
     @Override

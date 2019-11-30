@@ -3,7 +3,7 @@ package Prove;
 import Expressions.Expression;
 import com.microsoft.z3.*;
 
-public class Z3Prover extends Prover {
+public class Z3Prover implements Prover {
     private Context ctx = new Context();
     private ExpressionConverter<Expr> converter = new Z3Converter(ctx);
 

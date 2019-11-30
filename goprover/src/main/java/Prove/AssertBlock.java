@@ -26,14 +26,14 @@ public class AssertBlock implements StatementBlock {
     }
 
     @Override
-    public Expression calculateCondition(ProveContext proveContext, ProveBlock proveBlock, Expression post) {
+    public Expression calculateCondition(ProveModule proveModule, ProveBlock proveBlock, Expression post) {
         List<StatementBlock> statementBlocks = new ArrayList<>();
         for (int i = 0; i < proveBlock.statementBlocks.size() && proveBlock.statementBlocks.get(i) != this; i++) {
             statementBlocks.add(proveBlock.statementBlocks.get(i));
         }
         if (first) {
             String failMessage = String.format("Failed to prove assertion at line: %d", getLine());
-            proveContext.add(proveBlock.precondition, expression, statementBlocks, failMessage);
+            proveModule.add(proveBlock.precondition, expression, statementBlocks, failMessage);
             first = false;
         }
         return post;

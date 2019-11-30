@@ -1,39 +1,32 @@
 package Prove;
 
+import java.util.*;
 import Expressions.*;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
+// Klasa konteksu dowodzenia pośrednicząca między parserem a modułem dowodzącym
 public class ProveContext {
+    // Lista trójek Hoaer'a do udowodnienia
     private ArrayList<ProveBlock> toProve = new ArrayList<>();
+    // Obiekt sprawdający poprawność implikacji
     private Prover prover = new Z3Prover();
+    // Lista argumentów funkcji
     private List<OperandName> args;
+    // Mapa zadeklarowanych zmiennych i odpowiadających im obiektów.
     private Map<String, OperandName> declarationTable = new HashMap<>();
-    public List<Boolean> boolList = new ArrayList<>();
-
-    public ProveContext(){}
-
-    public void create(Expression precondition, Expression postcondition, List<StatementBlock> code, List<OperandName> args) {
-        this.toProve.add(new ProveBlock(code, precondition, postcondition, "Failed to prove postcondition!"));
-        this.args = args;
-    }
+    // Lista z wynikami dowodzenia
 
 
+    public ProveModule proveModule = null;
 
-
-    public void add(Expression precondition, Expression postcondition, List<StatementBlock> code, String error) {
-        toProve.add(new ProveBlock(code, precondition, postcondition, error));
-    }
-
-    public void add(Expression precondition, Expression postcondition, List<StatementBlock> code) {
-        toProve.add(new ProveBlock(code, precondition, postcondition));
-    }
-
-    public Prover getProver() {
-        return prover;
+    // Tworzy moduł dowodzenia dla danej funkcji.
+    // parametr: precondition - warunek początkowy funkcji.
+    // parametr: postcondition - warunek końcowy funkcji.
+    // parametr: code - lista instrukcji funkcji .
+    // parametr: args - argumenty funkcji.
+    public void create(Expression precondition, Expression postcondition,
+                       List<StatementBlock> code, List<OperandName> args) {
+        proveModule = new ProveModule(precondition, postcondition, code, args);
     }
 
     public void declareVariable(OperandName op) {
@@ -50,10 +43,6 @@ public class ProveContext {
         declarationTable.remove(op);
     }
 
-    public boolean hasVariable(String op) {
-        return declarationTable.containsKey(op);
-    }
-
     public OperandName getVariable(String op) {
         if (!declarationTable.containsKey(op)) {
             throw new RuntimeException(String.format("Variable %s is not defined!", op));
@@ -61,67 +50,7 @@ public class ProveContext {
         return declarationTable.get(op);
     }
 
-    public void onError(String error) {
-        System.out.println(error);
-        boolList.add(false);
-    }
-
-    private void onSuccess() {
-        boolList.add(true);
-    }
-
-    public void proveImpl(Expression left, Expression right, String error) {
-        if(!prover.implies(left, right)) {
-            onError(error);
-        }
-    }
-
     public List<Boolean> prove() {
-        // Calculate assertions
-        List<StatementBlock> code = toProve.get(0).statementBlocks;
-        List<Expression> assertion = new ArrayList<>();
-        for (OperandName op : args) {
-            if (op.getType().equals("int")) {
-                assertion.add(new BinaryExpression(
-                        op,
-                        new OperandName(String.format("%s'old", op.getName())),
-                        "=="
-                ));
-            }
-            else {
-                OperandName oldIter = new OperandName(String.format("%s'olditer", op.getName()));
-                assertion.add(new ForallExpression(
-                        oldIter,
-                        new BinaryExpression(
-                                new ArrayExpression(op, oldIter),
-                                new ArrayExpression(new OperandName(String.format("%s'old", op.getName())), oldIter),
-                                "=="
-                        )
-                ));
-            }
-        }
-        for (Expression e : assertion) {
-            toProve.get(0).precondition = new BinaryExpression(toProve.get(0).precondition, e, "&&");
-        }
-        for (StatementBlock statementBlock : code) {
-            assertion = statementBlock.getForwardAssertion(assertion);
-        }
-
-        boolList.clear();
-
-        for (int j = 0; j < toProve.size(); j++) {
-            List<StatementBlock> list = toProve.get(j).statementBlocks;
-            Expression postAssertion = toProve.get(j).postcondition;
-            for (int i = list.size() - 1; i >= 0; i--) {
-                postAssertion = list.get(i).calculateCondition(this, toProve.get(j), postAssertion);
-            }
-            boolean im = prover.implies(toProve.get(j).precondition, postAssertion);
-            if(!im) {
-                onError(toProve.get(j).onProveFail());
-            } else {
-                onSuccess();
-            }
-        }
-        return boolList;
+        return proveModule.prove();
     }
 }

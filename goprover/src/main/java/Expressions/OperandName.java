@@ -3,7 +3,7 @@ package Expressions;
 
 import Prove.ProveContext;
 
-public final class OperandName implements SimpleExpression {
+public final class OperandName implements Expression {
     private final String name;
     private final String type;
 

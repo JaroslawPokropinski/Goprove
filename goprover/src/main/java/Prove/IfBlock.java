@@ -29,21 +29,21 @@ public class IfBlock implements StatementBlock {
     }
 
     @Override
-    public Expression calculateCondition(ProveContext proveContext, ProveBlock proveBlock, Expression post) {
+    public Expression calculateCondition(ProveModule proveModule, ProveBlock proveBlock, Expression post) {
         Expression left, right;
         if (elBody == null) {
             left = new BinaryExpression(new UnaryExpression("!", condition), post, "&&");
         } else {
             Expression elBodyAssertion = post;
             for (int i = elBody.size() - 1; i >= 0; i--) {
-                elBodyAssertion = elBody.get(i).calculateCondition(proveContext, proveBlock, elBodyAssertion);
+                elBodyAssertion = elBody.get(i).calculateCondition(proveModule, proveBlock, elBodyAssertion);
             }
             left = new BinaryExpression(new UnaryExpression("!", condition), elBodyAssertion, "&&");
         }
 
         Expression bodyAssertion = post;
         for (int i = body.size() - 1; i >= 0; i--) {
-            bodyAssertion = body.get(i).calculateCondition(proveContext, proveBlock, bodyAssertion);
+            bodyAssertion = body.get(i).calculateCondition(proveModule, proveBlock, bodyAssertion);
         }
         right = new BinaryExpression(condition, bodyAssertion, "&&");
         return new BinaryExpression(left, right, "||");
@@ -56,6 +56,7 @@ public class IfBlock implements StatementBlock {
 
     @Override
     public List<Expression> getForwardAssertion(List<Expression> prev) {
+        // TODO: recursion for body and elBody
         for (Iterator<Expression> iterator = prev.iterator(); iterator.hasNext(); ) {
             Expression next = iterator.next();
             // if next contains any of variables then remove it
@@ -66,7 +67,6 @@ public class IfBlock implements StatementBlock {
                 }
             }
         }
-        // TODO : In the loop assertions
         return prev;
     }
 
@@ -82,6 +82,17 @@ public class IfBlock implements StatementBlock {
                                 var.add(v);
                             }
                         });
+            }
+            if (elBody != null) {
+                for (StatementBlock statementBlock : elBody) {
+                    statementBlock
+                            .getVariables()
+                            .forEach((v) -> {
+                                if (!var.contains(v)) {
+                                    var.add(v);
+                                }
+                            });
+                }
             }
         }
         return var;

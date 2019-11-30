@@ -2,7 +2,7 @@ package Expressions;
 
 import Prove.ProveContext;
 
-public class Literal implements SimpleExpression {
+public class Literal implements Expression {
     private final String value;
 
     public static Literal zero = new Literal("0");
