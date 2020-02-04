@@ -76,7 +76,6 @@ public class Goprove {
 
 
 
-    @Export
     public static ProveResult prove(String code) {
         ProveContext proveContext = null;
         try {
