@@ -5,7 +5,7 @@ import Expressions.OperandName;
 import java.util.List;
 
 // Interfejs instrukcji
-public interface StatementBlock {
+public interface Statement {
     // Zwraca linie kodu na której wystąpiła dana instrukcja.
     // return: linia kodu.
     int getLine();

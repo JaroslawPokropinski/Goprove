@@ -7,28 +7,64 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="93d5a541-7120-415c-82d1-70fa0a01f2a4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Prove/ProveModule.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/goprover_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/goprover_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/goprover.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Goprove/Goprove.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Goprove/ProveResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Prove/StatementBaseVisitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../14569A.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Golang.g4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Goprove.g4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../com.microsoft.z3.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/goprover_jar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/com_microsoft_z3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/com_microsoft_z3.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Expressions/Expression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Expressions/Expression.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Expressions/Literal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Expressions/Literal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Expressions/OperandName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Expressions/OperandName.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Expressions/PrimaryExpression.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Expressions/SimpleExpression.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Prove/AssertBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Prove/AssertBlock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Prove/AssignmentBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Prove/AssignmentBlock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Prove/EmptyBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Prove/EmptyBlock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Prove/IfBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Prove/IfBlock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Prove/LoopBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Prove/LoopBlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/main/java/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/resources/main/java/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/antlr4/Goprove.g4" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/antlr4/Goprove.g4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Antlr/GoproveBaseListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Antlr/GoproveBaseListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Antlr/GoproveBaseVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Antlr/GoproveBaseVisitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Antlr/GoproveLexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Antlr/GoproveLexer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Antlr/GoproveListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Antlr/GoproveListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Antlr/GoproveParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Antlr/GoproveParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Antlr/GoproveVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Antlr/GoproveVisitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Expressions/ArrayExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Expressions/ArrayExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Expressions/BinaryExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Expressions/BinaryExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Prove/AssertBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Prove/AssertStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Prove/AssignmentBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Prove/AssignmentStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Prove/EmptyBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Prove/EmptyStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Prove/FunctionVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Prove/FunctionVisitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Prove/IfBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Prove/IfStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Prove/LoopBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Prove/LoopStatement.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Prove/ProveBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Prove/ProveBlock.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Prove/ProveContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Prove/ProveContext.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Prove/Prover.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Prove/Prover.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Prove/ReturnBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Prove/ReturnBlock.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Prove/StatementBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Prove/StatementBlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Prove/ProveModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Prove/ProveModule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Prove/ReturnBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Prove/ReturnStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Prove/StatementBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Prove/Statement.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Prove/Z3Prover.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Prove/Z3Prover.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ExpressionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ExpressionTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ProveContextTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ProveContextTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vscode extension/goprove-integration/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vscode extension/goprove-integration/.vscode/extensions.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vscode extension/goprove-integration/.vscode/launch.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vscode extension/goprove-integration/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vscode extension/goprove-integration/.vscode/tasks.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vscode extension/goprove-integration/.vscodeignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vscode extension/goprove-integration/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vscode extension/goprove-integration/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vscode extension/goprove-integration/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vscode extension/goprove-integration/src/extension.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vscode extension/goprove-integration/src/test/extension.test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vscode extension/goprove-integration/src/test/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vscode extension/goprove-integration/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vscode extension/goprove-integration/tslint.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vscode extension/goprove-integration/vsc-extension-quickstart.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vscode extension/goprove-integration/yarn.lock" beforeDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,8 +85,20 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="1QYBmxp7E0KHzqakpaBojMAxfpT" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="$PROJECT_DIR$/src/main/antlr4/Golang.g4::/auto-gen" value="false" />
     <property name="$PROJECT_DIR$/src/main/antlr4/Golang.g4::/gen-listener" value="false" />
@@ -59,12 +107,13 @@
     <property name="$PROJECT_DIR$/src/main/antlr4/Goprove.g4::/gen-listener" value="true" />
     <property name="$PROJECT_DIR$/src/main/antlr4/Goprove.g4::/gen-visitor" value="true" />
     <property name="$PROJECT_DIR$/src/main/antlr4/Goprove.g4::/output-dir" value="D:\Programming ssd\Praca dyplomowa\goprover\target\generated-sources\antlr4" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Artifacts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/main/java" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.3" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -91,21 +140,9 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
   <component name="RunManager" selected="JUnit.ProveContextTest">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
+    <configuration name="Goprove" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Goprove.Goprove" />
       <module name="goprover" />
       <extension name="coverage">
         <pattern>
@@ -161,10 +198,22 @@
         <item itemvalue="JUnit.ProveContextTest" />
         <item itemvalue="JUnit.ProveContextTest.shouldInferInvariant" />
         <item itemvalue="JUnit.ProveContextTest.proverShouldProveArrayForAll0" />
-        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Goprove" />
         <item itemvalue="JUnit.ProveContextTest.proverShouldProveArrayForAll" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -191,6 +240,70 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="709" y="356" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1580665831096">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="709" y="356" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1580665831096" />
+    <state x="765" y="235" key="#com.intellij.ide.util.MemberChooser" timestamp="1580664164175">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="765" y="235" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1580664164175" />
+    <state x="765" y="235" key="#com.intellij.ide.util.MemberChooser/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1576577466338" />
+    <state x="689" y="303" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1580666293021">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="689" y="303" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1580666293021" />
+    <state x="689" y="303" key="#com.intellij.ide.util.TreeClassChooserDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1575897325830" />
+    <state x="357" y="257" key="FileChooserDialogImpl" timestamp="1580666299431">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="357" y="257" key="FileChooserDialogImpl/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1580666299431" />
+    <state x="357" y="257" key="FileChooserDialogImpl/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1576493190380" />
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1580824596752">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1580824596752" />
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1576496548051" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1580824596752">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1580824596752" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1576496548051" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1580824596752">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1580824596752" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1576496548051" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1580824596752">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1580824596752" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1576496548051" />
+    <state x="440" y="94" key="SettingsEditor" timestamp="1580824075491">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="440" y="94" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1580824075491" />
+    <state x="440" y="94" key="SettingsEditor/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1576493194748" />
+    <state x="764" y="388" key="classpath-attribute-editor" timestamp="1575896954953">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="764" y="388" key="classpath-attribute-editor/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1575896954953" />
+    <state x="661" y="343" key="com.intellij.ide.util.TipDialog" timestamp="1580822985980">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="661" y="343" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1580822985980" />
+    <state x="661" y="343" key="com.intellij.ide.util.TipDialog/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1576576934791" />
+    <state x="2581" y="343" key="com.intellij.ide.util.TipDialog/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1575909304708" />
+    <state x="2195" y="-15" width="1328" height="1028" key="dock-window-1" timestamp="1576577584357">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2195" y="-15" width="1328" height="1028" key="dock-window-1/1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1576577584357" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1580664520399">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1580664520399" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

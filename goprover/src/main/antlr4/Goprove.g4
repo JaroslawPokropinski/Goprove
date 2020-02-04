@@ -1342,7 +1342,7 @@ fragment UNICODE_LETTER
  | [\uFFDA-\uFFDC]
  ;
 
-// Goprove specific
+// Goprove.Goprove specific
 PRAGMA
     : '//@'
     ;

@@ -4,46 +4,30 @@ import Expressions.*;
 import java.util.ArrayList;
 import java.util.List;
 
-// Klasa modułu dowodzącego.
 public class ProveModule {
-    // Obiekt sprawdający poprawność implikacji.
-    private Prover prover = new Z3Prover();
-    // Lista trójek Hoaer'a do udowodnienia.
+    private Prover prover = null;
     private ArrayList<ProveBlock> toProve;
-    // Lista z wynikami dowodzenia.
+    public List<String> errors = new ArrayList<>();
     private List<Boolean> boolList = new ArrayList<>();
-    // Warunek początkowy funkcji.
     private Expression precondition;
-    // Warunek końcowy funkcji.
     private Expression postcondition;
-    // Lista instrukcji funkcji.
-    private List<StatementBlock> code;
-    // Lista argumentów funkcji.
+    private List<Statement> code;
     private List<OperandName> args;
 
-    // parametr: precondition - warunek początkowy funkcji.
-    // parametr: postcondition - warunek końcowy funkcji.
-    // parametr: code - lista instrukcji funkcji .
-    // parametr: args - argumenty funkcji.
     public ProveModule(Expression precondition, Expression postcondition,
-                       List<StatementBlock> code, List<OperandName> args) {
+                       List<Statement> code, List<OperandName> args, boolean verbose) {
         this.precondition = precondition;
         this.postcondition = postcondition;
         this.code = code;
         this.args = args;
+        prover = new Z3Prover(verbose);
     }
 
-    // Dodaje trójkę do listy trójek do dowiedzenia
-    // parametr: precondition - warunek początkowy.
-    // parametr: postcondition - warunek końcowy.
-    // parametr: code - lista instrukcji.
-    // parametr: error - tekst błędu jeśli dowodzenie się nie powiedzie.
     void add(Expression precondition, Expression postcondition,
-               List<StatementBlock> code, String error) {
+             List<Statement> code, String error) {
         toProve.add(new ProveBlock(code, precondition, postcondition, error));
     }
 
-    // Dzieli koniunkcje na liste wyrażeń.
     private List<Expression> getAssertionList(Expression expression) {
         if (expression instanceof BinaryExpression) {
             BinaryExpression be = (BinaryExpression) expression;
@@ -59,26 +43,21 @@ public class ProveModule {
         return l;
     }
 
-    // Funkcja wykonująca się podczas błędu dowodzenia.
     void onError(String error) {
-        System.out.println(error);
+        errors.add(error);
         boolList.add(false);
     }
 
-    // Funkcja wykonująca się podczas błędu dowodzenia.
     private void onSuccess() {
         boolList.add(true);
     }
 
-    // Dowodzi implikacje za pomocą obiektu prover.
     void proveImpl(Expression left, Expression right, String error) {
         if(!prover.implies(left, right)) {
             onError(error);
         }
     }
 
-    // Dowodzi trójki na liście toProve.
-    // return: Lista z wynikami dowodzenia.
     public List<Boolean> prove() {
         // Calculate assertions
         toProve = new ArrayList<>();
@@ -109,21 +88,17 @@ public class ProveModule {
             toProve.get(0).precondition = new BinaryExpression(toProve.get(0).precondition, e, "&&");
         }
         // add precondition to assertion
+        assertion.clear();
         assertion.addAll(getAssertionList(toProve.get(0).precondition));
 
-        for (StatementBlock statementBlock : code) {
-            assertion = statementBlock.getForwardAssertion(assertion);
+        for (Statement statement : code) {
+            assertion = statement.getForwardAssertion(assertion);
         }
 
         boolList.clear();
 
         for (int j = 0; j < toProve.size(); j++) {
-            List<StatementBlock> list = toProve.get(j).statementBlocks;
             Expression calculatedAssertion = toProve.get(j).calculateCondition(this);
-//            Expression postAssertion = toProve.get(j).postcondition;
-//            for (int i = list.size() - 1; i >= 0; i--) {
-//                postAssertion = list.get(i).calculateCondition(this, toProve.get(j), postAssertion);
-//            }
             boolean im = prover.implies(toProve.get(j).precondition, calculatedAssertion);
             if(!im) {
                 onError(toProve.get(j).onProveFail());

@@ -39,7 +39,49 @@ public final class BinaryExpression implements Expression {
 
     @Override
     public String toString() {
-        return String.format("(%s) %s (%s)", left, binaryOperator, right);
+        boolean leftPar = true;
+        boolean rightPar = true;
+        if (left instanceof BinaryExpression && right instanceof BinaryExpression) {
+            BinaryExpression leftBin = (BinaryExpression) left;
+            BinaryExpression rightBin = (BinaryExpression) right;
+            if (isBoolean()) {
+                if (!leftBin.isBoolean()) {
+                    leftPar = false;
+                }
+                if (!rightBin.isBoolean()) {
+                    rightPar = false;
+                }
+            }
+            if (binaryOperator.equals("&&") && !leftBin.getBinaryOperator().equals("||")) {
+                leftPar = false;
+            }
+            if (binaryOperator.equals("&&") && !rightBin.getBinaryOperator().equals("||")) {
+                rightPar = false;
+            }
+
+            if (binaryOperator.equals("||")) {
+                leftPar = false;
+                rightPar = false;
+            }
+        }
+        if (left instanceof OperandName || left instanceof UnaryExpression || left instanceof  Literal) {
+            leftPar = false;
+        }
+
+        if (right instanceof OperandName|| right instanceof UnaryExpression || right instanceof  Literal) {
+            rightPar = false;
+        }
+
+        if (leftPar && rightPar) {
+            return String.format("(%s) %s (%s)", left, binaryOperator, right);
+        }
+        if (!leftPar && rightPar) {
+            return String.format("%s %s (%s)", left, binaryOperator, right);
+        }
+        if (leftPar) {
+            return String.format("(%s) %s %s", left, binaryOperator, right);
+        }
+        return String.format("%s %s %s", left, binaryOperator, right);
     }
 
     @Override

@@ -9,19 +9,34 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class IfBlock implements StatementBlock {
+public class IfStatement implements Statement {
 
     private int line;
     private Expression condition;
-    private List<StatementBlock> body;
-    private List<StatementBlock> elBody;
+    private List<Statement> body;
+    private List<Statement> elBody;
     private List<OperandName> var = null;
 
-    public IfBlock(int line, Expression condition, List<StatementBlock> body) {
+    public IfStatement(int line, Expression condition, List<Statement> body) {
         this(line, condition, body, null);
     }
 
-    public IfBlock(int line, Expression condition, List<StatementBlock> body, List<StatementBlock> elBody) {
+    public IfStatement(int line, Expression condition, List<Statement> body, List<Statement> elBody) {
+        if (condition == null || body == null) {
+            throw new NullPointerException("At line: " + line);
+        }
+        for (Statement st : body) {
+            if (st == null) {
+                throw new NullPointerException("At line: " + line);
+            }
+        }
+        if (elBody != null) {
+            for (Statement st : elBody) {
+                if (st == null) {
+                    throw new NullPointerException("At line: " + line);
+                }
+            }
+        }
         this.line = line;
         this.condition = condition;
         this.body = body;
@@ -74,8 +89,8 @@ public class IfBlock implements StatementBlock {
     public List<OperandName> getVariables() {
         if (var == null) {
             var = new ArrayList<>();
-            for (StatementBlock statementBlock : body) {
-                statementBlock
+            for (Statement statement : body) {
+                statement
                         .getVariables()
                         .forEach((v) -> {
                             if (!var.contains(v)) {
@@ -84,8 +99,8 @@ public class IfBlock implements StatementBlock {
                         });
             }
             if (elBody != null) {
-                for (StatementBlock statementBlock : elBody) {
-                    statementBlock
+                for (Statement statement : elBody) {
+                    statement
                             .getVariables()
                             .forEach((v) -> {
                                 if (!var.contains(v)) {

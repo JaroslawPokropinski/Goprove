@@ -6,10 +6,10 @@ import Expressions.OperandName;
 import java.util.Collections;
 import java.util.List;
 
-public class ReturnBlock implements StatementBlock {
-    private int line;
+public class EmptyStatement implements Statement {
 
-    public ReturnBlock(int line) {
+    private int line;
+    public EmptyStatement(int line) {
         this.line = line;
     }
 
@@ -19,18 +19,12 @@ public class ReturnBlock implements StatementBlock {
     }
 
     @Override
-    public String toString() {
-        return "return";
-    }
-
-    @Override
     public int getLine() {
         return line;
     }
 
     @Override
     public List<Expression> getForwardAssertion(List<Expression> prev) {
-        prev.clear();
         return prev;
     }
 

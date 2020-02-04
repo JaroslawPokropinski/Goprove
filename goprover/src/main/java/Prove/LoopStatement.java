@@ -6,9 +6,9 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-public class LoopBlock implements StatementBlock {
+public class LoopStatement implements Statement {
     private Expression condition;
-    private List<StatementBlock> body;
+    private List<Statement> body;
     private Expression invariant, variant;
     private int line;
     private List<OperandName> var = null;
@@ -17,9 +17,14 @@ public class LoopBlock implements StatementBlock {
     private Expression calculatedCondition = null;
     private OperandName loopVar;
 
-    public LoopBlock(int line, Expression condition, List<StatementBlock> body, Expression invariant, Expression variant) {
+    public LoopStatement(int line, Expression condition, List<Statement> body, Expression invariant, Expression variant) {
         if (condition == null || body == null || invariant == null || variant == null) {
             throw new NullPointerException("At line: " + line);
+        }
+        for (Statement st : body) {
+            if (st == null) {
+                throw new NullPointerException("At line: " + line);
+            }
         }
         this.line = line;
         this.condition = condition;
@@ -35,8 +40,8 @@ public class LoopBlock implements StatementBlock {
     public List<OperandName> getVariables() {
         if (var == null) {
             var = new ArrayList<>();
-            for (StatementBlock statementBlock : body) {
-                statementBlock
+            for (Statement statement : body) {
+                statement
                         .getVariables()
                         .forEach((v) -> {
                             if (!var.contains(v)) {
@@ -70,7 +75,7 @@ public class LoopBlock implements StatementBlock {
         // loopVar global prev add loopVar == variant and loop
         prev.add(new BinaryExpression(loopVar, variant, "=="));
 
-        for (StatementBlock block : body) {
+        for (Statement block : body) {
             prev = block.getForwardAssertion(prev);
         }
         postAssertion.addAll(prev);
@@ -93,7 +98,7 @@ public class LoopBlock implements StatementBlock {
         stringBuilder.append("loop ");
         stringBuilder.append(condition);
         stringBuilder.append(" {\n");
-        for (StatementBlock block : body) {
+        for (Statement block : body) {
             stringBuilder.append(block.toString());
             stringBuilder.append("\n");
         }
@@ -104,7 +109,8 @@ public class LoopBlock implements StatementBlock {
     private static int loopVarCount = 0;
 
     @Override
-    public Expression calculateCondition(ProveModule proveModule, ProveBlock proveBlock, Expression post) {Expression strongInvariant = invariant;
+    public Expression calculateCondition(ProveModule proveModule, ProveBlock proveBlock, Expression post) {
+        Expression strongInvariant = invariant;
         for (Expression expression : postAssertion) {
             strongInvariant = new BinaryExpression(strongInvariant, expression, "&&");
         }
@@ -123,7 +129,7 @@ public class LoopBlock implements StatementBlock {
                 proveModule.add(varExpression, new BinaryExpression(variant, z, "<"), body, String.format("Warning: loop might not exit (variant is not decreasing) at: %s", getLine()));
                 // prove that invariant implies variant >= 0
                 proveModule.proveImpl(
-                        invariant,
+                        strongInvariant,
                         new BinaryExpression(variant, new Literal("0"), ">="),
                         String.format("Warning: loop might not exit (variant is not >= 0) at: %s", getLine())
                 );

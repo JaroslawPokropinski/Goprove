@@ -1,4 +1,4 @@
-package Antlr;// Generated from D:/Programming ssd/Praca dyplomowa/goprover/src/main/antlr4\Goprove.g4 by ANTLR 4.7.2
+package Antlr;// Generated from D:/Programming ssd/Praca dyplomowa/goprover/src/main/antlr4\Goprove.Goprove.g4 by ANTLR 4.7.2
 import org.antlr.v4.runtime.Lexer;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.Token;
@@ -155,7 +155,7 @@ public class GoproveLexer extends Lexer {
 	}
 
 	@Override
-	public String getGrammarFileName() { return "Goprove.g4"; }
+	public String getGrammarFileName() { return "Goprove.Goprove.g4"; }
 
 	@Override
 	public String[] getRuleNames() { return ruleNames; }

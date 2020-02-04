@@ -31,7 +31,7 @@ public class ArrayExpression implements Expression {
             ArrayExpression ae = (ArrayExpression) a;
             if (ae.getOperandName().getName().equals(operandName.getName())) {
                 return new TernaryExpression(
-                        new BinaryExpression(index, ae.getIndex(), "=="),
+                        new BinaryExpression(newIndex, ae.getIndex(), "=="),
                         b,
                         new ArrayExpression(operandName, newIndex)
                 );

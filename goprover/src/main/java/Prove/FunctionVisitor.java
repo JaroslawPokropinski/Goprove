@@ -62,15 +62,15 @@ public class FunctionVisitor extends GoproveBaseVisitor<Void> {
         }
     }
 
-    private class BlockVisitor extends GoproveBaseVisitor<List<StatementBlock>> {
+    private class BlockVisitor extends StatementBaseVisitor {
         private Map<String, OperandName> localDeclarationTable = new HashMap<>();
         private ProveContext proveContext;
         public BlockVisitor(ProveContext proveContext) {
             this.proveContext = proveContext;
         }
         @Override
-        public List<StatementBlock> visitBlock(GoproveParser.BlockContext ctx) {
-            List<StatementBlock> list = new ArrayList<>();
+        public List<Statement> visitBlock(GoproveParser.BlockContext ctx) {
+            List<Statement> list = new ArrayList<>();
             StatementVisitor visitor = new StatementVisitor(proveContext, localDeclarationTable);
             ctx.statementList().statement().forEach(s -> list.add(s.accept(visitor)));
             localDeclarationTable.forEach((name, _operandName) -> proveContext.undeclareVariable(name));
@@ -78,7 +78,7 @@ public class FunctionVisitor extends GoproveBaseVisitor<Void> {
         }
     }
 
-    private class StatementVisitor extends GoproveBaseVisitor<StatementBlock> {
+    private class StatementVisitor extends GoproveBaseVisitor<Statement> {
 
         private ProveContext proveContext;
         private Map<String, OperandName> localDeclarationTable;
@@ -89,7 +89,7 @@ public class FunctionVisitor extends GoproveBaseVisitor<Void> {
         }
 
         @Override
-        public StatementBlock visitAssignment(GoproveParser.AssignmentContext ctx) {
+        public Statement visitAssignment(GoproveParser.AssignmentContext ctx) {
             ExpressionVisitor expressionVisitor = new ExpressionVisitor();
             Stream<Expression> left = ctx.expressionList(0)
                     .children.stream()
@@ -107,7 +107,7 @@ public class FunctionVisitor extends GoproveBaseVisitor<Void> {
                         e.checkDeclaration(proveContext);
                         return e;
                     });
-            return new AssignmentBlock(
+            return new AssignmentStatement(
                     ctx.start.getLine(),
                     left.collect(Collectors.toList()),
                     right.collect(Collectors.toList()),
@@ -116,7 +116,7 @@ public class FunctionVisitor extends GoproveBaseVisitor<Void> {
         }
 
         @Override
-        public StatementBlock visitForStmt(GoproveParser.ForStmtContext ctx) {
+        public Statement visitForStmt(GoproveParser.ForStmtContext ctx) {
             // e.getOperands().forEach(op -> proveContext.getVariable(op.getName()));
             Expression invariant = new BinaryExpression(new Literal("0"), new Literal("0"), "==");
             if (ctx.loopInv() != null) {
@@ -138,23 +138,23 @@ public class FunctionVisitor extends GoproveBaseVisitor<Void> {
             }
             Expression condition = ctx.expression().accept(new ExpressionVisitor());
             condition.checkDeclaration(proveContext);
-            List<StatementBlock> body = ctx.block().accept(new BlockVisitor(proveContext));
+            List<Statement> body = ctx.block().accept(new BlockVisitor(proveContext));
 
-            return new LoopBlock(ctx.start.getLine(), condition, body, invariant, variant);
+            return new LoopStatement(ctx.start.getLine(), condition, body, invariant, variant);
         }
 
         @Override
-        public StatementBlock visitReturnStmt(GoproveParser.ReturnStmtContext ctx) {
-            return new ReturnBlock(ctx.start.getLine());
+        public Statement visitReturnStmt(GoproveParser.ReturnStmtContext ctx) {
+            return new ReturnStatement(ctx.start.getLine());
         }
 
         @Override
-        public StatementBlock visitAssertStatement(GoproveParser.AssertStatementContext ctx) {
-            return new AssertBlock(ctx.start.getLine(), ctx.expression().accept(new ExpressionVisitor()));
+        public Statement visitAssertStatement(GoproveParser.AssertStatementContext ctx) {
+            return new AssertStatement(ctx.start.getLine(), ctx.expression().accept(new ExpressionVisitor()));
         }
 
         @Override
-        public StatementBlock visitDeclaration(GoproveParser.DeclarationContext ctx) {
+        public Statement visitDeclaration(GoproveParser.DeclarationContext ctx) {
             if (ctx.varDecl() != null) {
                 List<TerminalNode>list = ctx.varDecl().varSpec().identifierList().IDENTIFIER();
                 List<Expression> operandNames = new ArrayList<>(list.size());
@@ -165,14 +165,14 @@ public class FunctionVisitor extends GoproveBaseVisitor<Void> {
                     operandNames.add(op);
                 }
                 if (ctx.varDecl().varSpec().expressionList() != null) {
-                    return new AssignmentBlock(
+                    return new AssignmentStatement(
                             ctx.start.getLine(),
                             operandNames,
                             ctx.varDecl().varSpec().expressionList().expression().stream().map(c -> c.accept(new ExpressionVisitor())).collect(Collectors.toList()),
                             "="
                     );
                 }
-                return new EmptyBlock(ctx.start.getLine());
+                return new EmptyStatement(ctx.start.getLine());
             }
             // TODO: Implement declaration of constants etc
             throw new UnimplementedException();
@@ -180,24 +180,24 @@ public class FunctionVisitor extends GoproveBaseVisitor<Void> {
         }
 
         @Override
-        public StatementBlock visitIfStmt(GoproveParser.IfStmtContext ctx) {
+        public Statement visitIfStmt(GoproveParser.IfStmtContext ctx) {
             if (ctx.simpleStmt() != null) {
                 throw new RuntimeException("Statement preceding conditionals are not supported");
             }
             // else
             if (ctx.block(1) != null) {
-                return new IfBlock(ctx.start.getLine(), ctx.expression().accept(new ExpressionVisitor()), ctx.block(0).accept(new BlockVisitor(proveContext)), ctx.block(1).accept(new BlockVisitor(proveContext)));
+                return new IfStatement(ctx.start.getLine(), ctx.expression().accept(new ExpressionVisitor()), ctx.block(0).accept(new BlockVisitor(proveContext)), ctx.block(1).accept(new BlockVisitor(proveContext)));
             }
             // else if
             if (ctx.ifStmt() != null) {
-                return new IfBlock(ctx.start.getLine(),
+                return new IfStatement(ctx.start.getLine(),
                         ctx.expression().accept(new ExpressionVisitor()),
                         ctx.block(0).accept(new BlockVisitor(proveContext)),
                         Collections.singletonList(ctx.ifStmt().accept(new StatementVisitor(proveContext, localDeclarationTable)))
                 );
             }
 
-            return new IfBlock(ctx.start.getLine(), ctx.expression().accept(new ExpressionVisitor()), ctx.block(0).accept(new BlockVisitor(proveContext)));
+            return new IfStatement(ctx.start.getLine(), ctx.expression().accept(new ExpressionVisitor()), ctx.block(0).accept(new BlockVisitor(proveContext)));
         }
     }
 

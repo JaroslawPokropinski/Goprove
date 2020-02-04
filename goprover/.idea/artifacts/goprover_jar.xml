@@ -6,12 +6,10 @@
         <element id="file-copy" path="$PROJECT_DIR$/resources/main/java/META-INF/MANIFEST.MF" />
       </element>
       <element id="module-output" name="goprover" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/../linux/com.microsoft.z3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/commons-cli/commons-cli/1.4/commons-cli-1.4.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/antlr/antlr4-runtime/4.7.1/antlr4-runtime-4.7.1.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/com.microsoft.z3.jar" path-in-jar="/" />
       <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/commons/commons-lang3/3.8.1/commons-lang3-3.8.1.jar" path-in-jar="/" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/../com.microsoft.z3.jar" path-in-jar="/" />
-      <element id="library" level="project" name="com.microsoft.z3" />
-      <element id="file-copy" path="C:/Programs/z3/libz3.dll" />
     </root>
   </artifact>
 </component>

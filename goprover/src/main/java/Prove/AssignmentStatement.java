@@ -8,13 +8,16 @@ import Expressions.OperandName;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AssignmentBlock implements StatementBlock {
+public class AssignmentStatement implements Statement {
     private List<Expression> left, right;
     private String op;
     private int line;
 
     // TODO: differentiate operators
-    public AssignmentBlock(int line, List<Expression> left, List<Expression> right, String op) {
+    public AssignmentStatement(int line, List<Expression> left, List<Expression> right, String op) {
+        if (!op.equals("=")) {
+            throw new RuntimeException("At line: " + line + " use '=' without operator");
+        }
         this.left = left;
         this.right = right;
         this.op = op;

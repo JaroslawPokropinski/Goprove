@@ -35,7 +35,7 @@ class ProveContextTest {
         GoproveParser parser = new GoproveParser(tokens);
         ParseTree tree = parser.sourceFile();
 
-        ProveContext proveContext = new ProveContext();
+        ProveContext proveContext = new ProveContext(false);
         GoproveBaseVisitor<Void> visitor = new SourceVisitor(proveContext);
         visitor.visit(tree);
         List<Boolean> t = proveContext.prove();
@@ -63,7 +63,7 @@ class ProveContextTest {
         GoproveParser parser = new GoproveParser(tokens);
         ParseTree tree = parser.sourceFile();
 
-        ProveContext proveContext = new ProveContext();
+        ProveContext proveContext = new ProveContext(false);
         GoproveBaseVisitor<Void> visitor = new SourceVisitor(proveContext);
         visitor.visit(tree);
         List<Boolean> t = proveContext.prove();
@@ -101,7 +101,7 @@ class ProveContextTest {
         GoproveParser parser = new GoproveParser(tokens);
         ParseTree tree = parser.sourceFile();
 
-        ProveContext proveContext = new ProveContext();
+        ProveContext proveContext = new ProveContext(false);
         GoproveBaseVisitor<Void> visitor = new SourceVisitor(proveContext);
         visitor.visit(tree);
         List<Boolean> t = proveContext.prove();
@@ -138,7 +138,7 @@ class ProveContextTest {
         GoproveParser parser = new GoproveParser(tokens);
         ParseTree tree = parser.sourceFile();
 
-        ProveContext proveContext = new ProveContext();
+        ProveContext proveContext = new ProveContext(false);
         GoproveBaseVisitor<Void> visitor = new SourceVisitor(proveContext);
         visitor.visit(tree);
         List<Boolean> t = proveContext.prove();
@@ -171,7 +171,7 @@ class ProveContextTest {
         GoproveParser parser = new GoproveParser(tokens);
         ParseTree tree = parser.sourceFile();
 
-        ProveContext proveContext = new ProveContext();
+        ProveContext proveContext = new ProveContext(false);
         GoproveBaseVisitor<Void> visitor = new SourceVisitor(proveContext);
         visitor.visit(tree);
         List<Boolean> t = proveContext.prove();
@@ -199,7 +199,7 @@ class ProveContextTest {
         GoproveParser parser = new GoproveParser(tokens);
         ParseTree tree = parser.sourceFile();
 
-        ProveContext proveContext = new ProveContext();
+        ProveContext proveContext = new ProveContext(false);
         GoproveBaseVisitor<Void> visitor = new SourceVisitor(proveContext);
         visitor.visit(tree);
         List<Boolean> t = proveContext.prove();
@@ -229,7 +229,7 @@ class ProveContextTest {
         GoproveParser parser = new GoproveParser(tokens);
         ParseTree tree = parser.sourceFile();
 
-        ProveContext proveContext = new ProveContext();
+        ProveContext proveContext = new ProveContext(false);
         GoproveBaseVisitor<Void> visitor = new SourceVisitor(proveContext);
         visitor.visit(tree);
         List<Boolean> t = proveContext.prove();
@@ -263,7 +263,7 @@ class ProveContextTest {
         GoproveParser parser = new GoproveParser(tokens);
         ParseTree tree = parser.sourceFile();
 
-        ProveContext proveContext = new ProveContext();
+        ProveContext proveContext = new ProveContext(false);
         GoproveBaseVisitor<Void> visitor = new SourceVisitor(proveContext);
         visitor.visit(tree);
         List<Boolean> t = proveContext.prove();
@@ -297,7 +297,7 @@ class ProveContextTest {
         GoproveParser parser = new GoproveParser(tokens);
         ParseTree tree = parser.sourceFile();
 
-        ProveContext proveContext = new ProveContext();
+        ProveContext proveContext = new ProveContext(false);
         GoproveBaseVisitor<Void> visitor = new SourceVisitor(proveContext);
         visitor.visit(tree);
         List<Boolean> t = proveContext.prove();
@@ -340,7 +340,7 @@ class ProveContextTest {
         GoproveParser parser = new GoproveParser(tokens);
         ParseTree tree = parser.sourceFile();
 
-        ProveContext proveContext = new ProveContext();
+        ProveContext proveContext = new ProveContext(false);
         GoproveBaseVisitor<Void> visitor = new SourceVisitor(proveContext);
         visitor.visit(tree);
         List<Boolean> t = proveContext.prove();
@@ -377,7 +377,7 @@ class ProveContextTest {
         GoproveParser parser = new GoproveParser(tokens);
         ParseTree tree = parser.sourceFile();
 
-        ProveContext proveContext = new ProveContext();
+        ProveContext proveContext = new ProveContext(false);
         GoproveBaseVisitor<Void> visitor = new SourceVisitor(proveContext);
         visitor.visit(tree);
         List<Boolean> t = proveContext.prove();
@@ -385,6 +385,4 @@ class ProveContextTest {
         List<Boolean> trues = new ArrayList<>(Collections.nCopies(t.size(), true));
         Assertions.assertIterableEquals(trues, t);
     }
-
-    //TODO: test else and else if
 }
